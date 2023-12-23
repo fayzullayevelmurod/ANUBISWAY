@@ -1,0 +1,28 @@
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid #333333FF;
+    .main_container {
+        @include flex-center;
+        justify-content: space-between;
+    }
+
+    .nav {
+        @include flex-center;
+
+        .left_logo {
+            display: block;
+            margin-right: 40px;
+        }
+
+        .nav_link {
+            @include flex-center;
+            gap: 22px;
+
+            .main_link {
+                span {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

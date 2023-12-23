@@ -6,6 +6,14 @@
         justify-content: space-between;
     }
 
+    .logo_text {
+        width: 286px;
+    }
+
+    .left_logo_media {
+        display: none;
+    }
+
     .nav {
         @include flex-center;
 
@@ -24,5 +32,9 @@
                 }
             }
         }
+    }
+
+    .burger_open {
+        display: none;
     }
 }

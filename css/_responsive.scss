@@ -18,7 +18,39 @@
         .footer_bottom {
             .footer_link {
                 gap: 12px;
+                .footer_item {
+                    a {
+                        font-size: 16px;
+                    }
+                }
             }
+
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .header {
+
+        .left_logo_media {
+            display: block;
+            width: 33px;
+        }
+
+        .logo_text {
+            width: 222px;
+        }
+
+        .nav {
+            display: none;
+
+            .left_logo {
+                margin-right: 0;
+            }
+        }
+
+        .burger_open {
+            display: block;
         }
     }
 }
@@ -140,4 +172,78 @@
 
 }
 
-// @media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 576px) {
+
+    .header {
+
+        .left_logo_media {
+            width: 23px;
+        }
+
+        .logo_text {
+            width: 135px;
+        }
+    }   
+
+
+    .footer {
+        padding: 36px 0;
+        .footer_table {
+            display: none;
+        }
+
+        .footer_top {
+            display: none;
+        }
+
+        .footer_mobile {
+            @include flex-center;
+            flex-direction: column;
+
+            .logo_text {
+                margin: 12px 0 30px 0;
+            }
+
+            .footer_link_media {
+                margin-bottom: 30px;
+                @include flex-center;
+                flex-direction: column;
+                gap: 24px;
+    
+                .footer_item {
+                    a {
+                        color: $--Primary-White;
+                        font-family: $Inter;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 130%;
+                    }
+                }
+            }
+
+            .messenger {
+                margin-bottom: 30px;
+            }
+
+            .footer_policy_link {
+                margin-bottom: 34px;
+                color: $--Primary-White;
+                font-family: $Inter;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 100%;
+                padding-bottom: 4px;
+                border-bottom: 1px solid $--Primary-White;
+            }
+
+            p {
+                color: $--Primary-White;
+                font-family: $Inter;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 100%;
+                opacity: 0.5;
+            }
+        }
+    }
+}

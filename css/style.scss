@@ -104,8 +104,8 @@ body {
 }
 
 // global block
-h1 {
-    color: $--Primary-Black;
+h1.main_title {
+    color: $--Primary-White;
     font-family: $Bebas;
     font-size: 52px;
     font-weight: 700;
@@ -132,7 +132,7 @@ h3 {
 }
 
 h4 {
-    color: $--Primary-Black;
+    color: $--Primary-White;
     font-family: $Bebas;
     font-size: 24px;
     font-weight: 700;
@@ -257,6 +257,33 @@ h4 {
         stroke: #909090;
     }
 }
+
+.breadcrumbs {
+    @include flex-full-center();
+    margin: 36px 0 48px 0;
+    gap: 12px;
+    li {
+        a {
+            color: $--Primary-Red;
+            font-family: $Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+
+        .line {
+            opacity: 0.7;
+        }
+
+        span {
+            color: $--Primary-White;
+            font-family: $Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+}
 // global block
 
 
@@ -341,6 +368,110 @@ h4 {
         clip: rect(82px, 9999px, 64px, 0)
     }
     
+}
+
+.contact {
+    text-align: center;
+    .contact_form {
+        margin-bottom: 36px;
+        gap: 24px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .main_btn {
+        width: 420px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        max-width: 339px;
+        margin: 0 auto 124px auto;
+        color: #707070;
+        text-align: center;
+        font-family: $Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 100%;
+
+        a {
+            color: $--Primary-White;
+            padding-bottom: 4px;
+            border-bottom: 1px solid $--Primary-White;
+        }
+    }
+
+    .form_left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        input {
+            background-color: transparent;
+            color: $--Primary-White;
+            font-family: $Inter;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 130%;
+            padding: 0 0 12px 0;
+            opacity: 0.7;
+            border: none;
+            border-bottom: 1px solid #333333FF;
+        }
+    }
+
+    .form_right {
+        flex: 1;
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            background-color: transparent;
+            color: $--Primary-White;
+            font-family: $Inter;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 130%;
+            padding: 0 0 12px 0;
+            opacity: 0.7;
+            border: none;
+            border-bottom: 1px solid #333333FF;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .main_title {
+        border: none;
+        margin-bottom: 48px;
+    }
+
+    .contact_bottom {
+        padding: 24px 0;
+        background-color: $--Primary-Red;
+
+        .main_container {
+            @include flex-full-center();
+            gap: 48px;
+        }
+
+        a {
+            @include flex-center();
+            gap: 12px;
+
+            span {
+                @include flex-full-center();
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background-color: $--Primary-Black;
+            }
+        }
+    }
 }
 
 

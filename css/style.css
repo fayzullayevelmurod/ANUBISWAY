@@ -619,6 +619,22 @@ h4 {
   .video .video_card .video_img {
     height: 480px;
   }
+  .contact .contact_form {
+    flex-direction: column;
+  }
+  .contact .form_right textarea {
+    height: 146px;
+  }
+  .contact .main_btn {
+    width: 100%;
+  }
+  .contact p {
+    max-width: 100%;
+    margin-bottom: 104px;
+  }
+  .contact .contact_bottom h4 {
+    color: #FFF;
+  }
   .footer .footer_table {
     display: flex;
     flex-direction: column;
@@ -748,6 +764,21 @@ h4 {
   }
   .video .main_btn span {
     padding: 12px;
+  }
+  .contact .main_title {
+    margin-bottom: 24px;
+  }
+  .contact .contact_form_wrapper input, .contact .contact_form_wrapper textarea {
+    font-size: 16px;
+  }
+  .contact .contact_bottom {
+    padding: 60px 0;
+  }
+  .contact .contact_bottom .main_container {
+    flex-direction: column;
+  }
+  .contact .contact_bottom a span {
+    flex-shrink: 0;
   }
   .footer {
     padding: 36px 0;

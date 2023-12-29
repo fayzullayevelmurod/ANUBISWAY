@@ -105,6 +105,7 @@ body {
 
 // global block
 h1.main_title {
+    text-align: center;
     color: $--Primary-White;
     font-family: $Bebas;
     font-size: 52px;
@@ -319,6 +320,7 @@ h4 {
         width: 420px;
     }
 }
+
 .glitch-window{
 	position: absolute;
 	top: 0;
@@ -471,6 +473,104 @@ h4 {
                 background-color: $--Primary-Black;
             }
         }
+    }
+}
+
+.bio {
+    .main_title {
+        text-align: center;
+    }
+}
+
+.video {
+    .videos_cards {
+        margin-top: 48px;
+        @include flex-start();
+        flex-wrap: wrap;
+        gap: 48px 34px;
+    }
+
+    .video_card {
+        width: calc(100% / 2 - 17px);
+
+
+        &:hover {
+            .play_btn {
+                z-index: 1;
+            }
+
+            .video_main_img {
+                filter: grayscale(0%);
+            }
+
+            p {
+                opacity: 1;
+            }
+
+            .bg_white {
+                background-color: $--Primary-Red;
+            }
+        }
+    }
+
+    .video_img {
+        position: relative;
+        height: 470px;
+        
+        .bg_white {
+            @include transition();
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // transform: translate();
+            background-color: $--Primary-White;
+        }
+
+        .play_btn {
+            z-index: -1;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .video_main_img {
+            @include transition();
+            transform: translate(-10px, -10px);
+            width: 100%;
+            height: 100%;
+            filter: grayscale(100%);
+        }
+    }
+
+    h6 {
+        margin-top: 40px;   
+        color: $--Primary-Red;
+        font-family: $Bebas;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 1.6px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        @include transition();
+        color: $--Primary-White;
+        font-family: $Inter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 130%;
+        opacity: .7;
+    }
+
+    .main_btn {
+        width: 100%;
+        margin: 48px 0 120px 0;
     }
 }
 

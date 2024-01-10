@@ -272,11 +272,48 @@
 
     }
 
-    
+    .donate {
+        .coperation_form {
+            .coperation_form_wrapper {
+                flex-direction: column;
+
+                textarea {
+                    height: 100px;
+                }
+
+            }
+        }
+
+        .coperation_title_two {
+            margin-top: 100px;
+            margin-bottom: 36px;
+        }
+
+        .coperation_btn {
+            .main_btn {
+                width: 100%;
+            }
+        }
+
+        p {
+            max-width: 100%;
+            margin-bottom: 100px;
+        }
+    }
 
 }
 
 @media only screen and (max-width: 576px) {
+    .ticker {
+        display: inline-block;
+        animation: marquee 50s linear infinite;
+    }
+    
+    .item-collection-1 {
+        position: relative;
+        left: 0%;
+        animation: swap 50s linear infinite;
+    }
 
     .coperation {
         .swiper-wrapper {
@@ -319,6 +356,71 @@
 
         .new_bottom_btns {
             margin: 60px 0;
+        }
+    }
+
+    .donate {
+
+        .coperation_title_two {
+            margin-top: 0;
+        }
+
+        .donate_text {
+            margin: 30px 0 60px 0;
+
+            h3 {
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .donate_slider,
+        .select_sum {
+            h6 {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .donate_slider {
+            margin-bottom: 60px;
+        }
+
+        .swiper-wrapper {
+            .swiper-slide {
+                height: 140px;
+                padding: 28px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .select_sum  {
+            margin: 60px 0;
+            padding: 0 20px;
+
+            .select_btns {
+                gap: 12px;
+                margin: 0 20px;
+                flex-direction: column;
+            }
+
+            .main_btn {
+                width: 100%;
+            }
+        }
+
+        .coperation_form  {
+            input, textarea {
+                font-size: 16px;
+            }
+        }
+
+        p {
+            margin-bottom: 60px;
         }
     }
 

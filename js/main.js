@@ -86,18 +86,31 @@ let swiper_new = new Swiper(".newSwiper", {
         nextEl: ".new-button-next",
         prevEl: ".new-button-prev",
     },
-    // breakpoints: {
-    //     300: {
-    //       slidesPerView: 2,
-    //       // spaceBetween: 24,
-    //     },
-    //     768: {
-    //       slidesPerView: 2,
-    //       // spaceBetween: 24,
-    //     },
-    //     1024: {
-    //       slidesPerView: 6,
-    //       // spaceBetween: 24,
-    //     },
-    // },
+});
+
+
+// newsSlider
+let swiper_donate = new Swiper(".donateSwiper", {
+  scrollbar: {
+      el: ".swiper-scrollbar",
+      // hide: true,
+  },
+  navigation: {
+      nextEl: ".donate-button-next",
+      prevEl: ".donate-button-prev",
+  },
+  breakpoints: {
+      300: {
+        slidesPerView: 2,
+        // spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 2,
+        // spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 5,
+        // spaceBetween: 24,
+      },
+  },
 });

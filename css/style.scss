@@ -295,6 +295,9 @@ h4 {
     }
 
     .news_card {
+        padding-left: 2px;
+        padding-right: 12px;
+        width: 100%;
         margin-bottom: 36px;
         h6 {
             max-width: 420px;
@@ -311,6 +314,7 @@ h4 {
             position: relative;
 
             img {
+                width: 100%;
                 filter: grayscale(100%);
             }
 
@@ -376,14 +380,63 @@ h4 {
     .swiper-scrollbar {
         position: static;
         height: 1px;
-        // max-width: 568px;
+        max-width: 600px;
         margin-bottom: 20px;
         background: $--Primary-Gray;
     }
 
     .swiper-scrollbar-drag {
-        // max-width: 100px;
         background: $--Primary-Red;
+    }
+
+    .ticker-wrap {
+        padding: 40px 0;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: $--Primary-Red; 
+    }
+
+    .ticker {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+    }
+
+    .item-collection-1 {
+        position: relative;
+        left: 0%;
+        animation: swap 20s linear infinite;
+    }
+      
+    .item {
+        display: inline-block;
+        padding: 0 1rem;
+        font-size: 50px;
+        color: $--Primary-White;   
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: $Bebas;
+    }
+      
+      /* Transition */
+    @keyframes marquee {
+        0% {
+          transform: translateX(0)
+        }
+        100% {
+          transform: translateX(-100%)
+        }
+    }
+      
+    @keyframes swap {
+        0%, 50% {
+          left: 0%;
+        }
+        50.01%,
+        100% {
+          left: 100%;
+        }
     }
 }
 

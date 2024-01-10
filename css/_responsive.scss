@@ -217,6 +217,18 @@
         }
     }
 
+    .galery {
+        .galery_wrapper {
+            margin: 48px 0 100px 0;
+            flex-direction: column;
+            gap: 48px;
+
+            .galery_card {
+                padding-right: 10px;
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 576px) {

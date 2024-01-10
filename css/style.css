@@ -218,6 +218,83 @@ h4 {
   line-height: 100%;
 }
 
+.news .news_slider {
+  margin-top: 48px;
+}
+.news .news_card {
+  margin-bottom: 36px;
+}
+.news .news_card h6 {
+  max-width: 420px;
+  margin-top: 24px;
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.2px;
+}
+.news .news_card .new_card_img {
+  position: relative;
+}
+.news .news_card .new_card_img img {
+  filter: grayscale(100%);
+}
+.news .news_card .new_card_img .card_bg {
+  position: absolute;
+  top: 10px;
+  right: 16%;
+  z-index: -1;
+  width: 65%;
+  height: 100%;
+  transform: skew(-25deg);
+  background-color: #FFF;
+}
+.news .swiper-wrapper {
+  margin-bottom: 36px;
+}
+.news .swiper-wrapper .swiper-slide-active img {
+  filter: grayscale(0%);
+}
+.news .swiper-wrapper .swiper-slide-active h6 {
+  color: #E63533;
+}
+.news .swiper-wrapper .swiper-slide-active .card_bg {
+  background-color: #E63533;
+}
+.news .news_pagination {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.news .news_pagination .news_btns {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.news .news_pagination .news_btns .news-button-prev,
+.news .news_pagination .news_btns .news-button-next {
+  cursor: pointer;
+  position: static;
+}
+.news .news_pagination .news_btns .swiper-button-disabled svg path {
+  stroke: #707070;
+}
+.news .swiper-scrollbar {
+  position: static;
+  height: 1px;
+  margin-bottom: 20px;
+  background: #707070;
+}
+.news .swiper-scrollbar-drag {
+  background: #E63533;
+}
+
 .error {
   margin-bottom: 120px;
   margin-top: 96px;

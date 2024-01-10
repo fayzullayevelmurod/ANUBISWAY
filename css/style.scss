@@ -288,6 +288,105 @@ h4 {
 // global block
 
 
+
+.news {
+    .news_slider {
+        margin-top: 48px;
+    }
+
+    .news_card {
+        margin-bottom: 36px;
+        h6 {
+            max-width: 420px;
+            margin-top: 24px;
+            color: $--Primary-White;
+            font-family: $Bebas;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 1.2px;
+        }
+
+        .new_card_img {
+            position: relative;
+
+            img {
+                filter: grayscale(100%);
+            }
+
+            .card_bg {
+                position: absolute;
+                top: 10px;
+                right: 16%;
+                z-index: -1;
+                width: 65%;
+                height: 100%;
+                transform: skew(-25deg);
+                background-color: $--Primary-White;
+            }
+        }
+        
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 36px;
+
+        .swiper-slide-active {
+            img {
+                filter: grayscale(0%);
+            }
+
+            h6 {
+                color: $--Primary-Red;
+            }
+
+            .card_bg {
+                background-color: $--Primary-Red;
+            }
+
+        }
+    }
+
+    .news_pagination {
+        margin-bottom: 100px;
+        @include flex-full-center();
+        flex-direction: column;
+
+        .news_btns {
+            user-select: none;
+            @include flex-center();
+            gap: 12px;
+
+            .news-button-prev, 
+            .news-button-next {
+                cursor: pointer;
+                position: static;
+            }
+
+            .swiper-button-disabled {
+                svg {
+                    path {
+                        stroke: $--Primary-Gray;
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-scrollbar {
+        position: static;
+        height: 1px;
+        // max-width: 568px;
+        margin-bottom: 20px;
+        background: $--Primary-Gray;
+    }
+
+    .swiper-scrollbar-drag {
+        // max-width: 100px;
+        background: $--Primary-Red;
+    }
+}
+
 .error{
     margin-bottom: 120px;
     margin-top: 96px;

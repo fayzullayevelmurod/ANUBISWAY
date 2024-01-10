@@ -1,5 +1,5 @@
-$(".error").append("<div class='glitch-window'></div>");
-$( "h1.glitched" ).clone().appendTo( ".glitch-window" );
+// $(".error").append("<div class='glitch-window'></div>");
+// $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
 // input mask
 // let phoneInput = document.getElementById('phone');
 // let myForm = document.forms.myForm;
@@ -17,3 +17,29 @@ $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
 //   e.preventDefault();
 // });
 // input mask
+
+// newsSlider
+let swiper_news = new Swiper(".newsSwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".news-button-next",
+        prevEl: ".news-button-prev",
+    },
+    breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+    },
+});

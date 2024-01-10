@@ -986,6 +986,37 @@ h4 {
 .header .nav .nav_link .main_link span {
   display: inline-block;
 }
+.header .nav .dropdown_link {
+  position: relative;
+}
+.header .nav .dropdown_link:hover .new_dropdown_link {
+  display: flex;
+}
+.header .nav .new_dropdown_link {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  transform: translateX(-14px);
+  padding: 11px;
+  background: #5c1514;
+  flex-direction: column;
+  gap: 12px;
+}
+.header .nav .new_dropdown_link a {
+  color: #FFF;
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.9px;
+  transition: 0.2s ease;
+}
+.header .nav .new_dropdown_link a:hover {
+  color: #E63533;
+}
 .header .burger_open {
   display: none;
 }

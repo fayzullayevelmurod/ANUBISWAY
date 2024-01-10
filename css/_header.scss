@@ -32,6 +32,44 @@
                 }
             }
         }
+        
+        .dropdown_link {
+            position: relative;
+
+            &:hover {
+                .new_dropdown_link {
+                    display: flex;
+                }
+            }
+        }
+
+        .new_dropdown_link {
+            display: none;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            left: 0;
+            transform: translateX(-14px);
+            padding: 11px;
+            background: #5C1514FF;
+            flex-direction: column;
+            gap: 12px;
+
+            a {
+                color: $--Primary-White;
+                text-align: center;
+                font-family: $Bebas;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.9px;
+                @include transition;
+
+                &:hover {
+                    color: $--Primary-Red;
+                }
+            }
+        }
     }
 
     .burger_open {

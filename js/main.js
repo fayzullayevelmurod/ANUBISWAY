@@ -69,3 +69,35 @@ let swiper_coperation = new Swiper(".coperationSwiper", {
         },
     },
 });
+
+// newSlider
+let swiper_new = new Swiper(".newSwiper", {
+    spaceBetween: 24,
+    initialSlide: 1,
+    hashNavigation: {
+      watchState: true,
+    },
+    loop: false,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".new-button-next",
+        prevEl: ".new-button-prev",
+    },
+    // breakpoints: {
+    //     300: {
+    //       slidesPerView: 2,
+    //       // spaceBetween: 24,
+    //     },
+    //     768: {
+    //       slidesPerView: 2,
+    //       // spaceBetween: 24,
+    //     },
+    //     1024: {
+    //       slidesPerView: 6,
+    //       // spaceBetween: 24,
+    //     },
+    // },
+});

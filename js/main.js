@@ -43,3 +43,29 @@ let swiper_news = new Swiper(".newsSwiper", {
         },
     },
 });
+
+// newsSlider
+let swiper_coperation = new Swiper(".coperationSwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".coperation-button-next",
+        prevEl: ".coperation-button-prev",
+    },
+    breakpoints: {
+        300: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 6,
+          // spaceBetween: 24,
+        },
+    },
+});

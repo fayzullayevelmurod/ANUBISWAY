@@ -218,6 +218,175 @@ h4 {
   line-height: 100%;
 }
 
+.coperation {
+  /* Transition */
+}
+.coperation .text-1 {
+  max-width: 680px;
+  margin: 30px auto 48px auto;
+  color: #FFF;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  opacity: 0.7;
+}
+.coperation .swiper-wrapper {
+  margin-bottom: 36px;
+}
+.coperation .swiper-wrapper .swiper-slide {
+  transition: 0.2s ease;
+  padding: 60px 80px;
+  border: 1px solid #E63533;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.coperation .swiper-wrapper .swiper-slide .coperation_card {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.coperation .swiper-wrapper .swiper-slide:hover {
+  background-color: #E63533;
+}
+.coperation .swiper-wrapper .swiper-slide-active img {
+  filter: grayscale(0%);
+}
+.coperation .swiper-wrapper .swiper-slide-active h6 {
+  color: #E63533;
+}
+.coperation .swiper-wrapper .swiper-slide-active .card_bg {
+  background-color: #E63533;
+}
+.coperation .coperation_title_two {
+  margin-top: 120px;
+  margin-bottom: 48px;
+  text-align: center;
+  color: #FFF;
+}
+.coperation .coperation_form {
+  max-width: 1318px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+.coperation .coperation_form .form_input {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.coperation .coperation_form input {
+  flex: 1;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 12px;
+}
+.coperation .coperation_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 36px 0 24px 0;
+}
+.coperation .coperation_btn .main_btn {
+  width: 420px;
+}
+.coperation p {
+  margin: 0 auto 124px auto;
+  max-width: 340px;
+  color: #707070;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.coperation p a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.coperation .coperation_pagination {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.coperation .coperation_pagination .coperation_btns {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.coperation .coperation_pagination .coperation_btns .news-button-prev,
+.coperation .coperation_pagination .coperation_btns .news-button-next {
+  cursor: pointer;
+  position: static;
+}
+.coperation .coperation_pagination .coperation_btns .swiper-button-disabled svg path {
+  stroke: #707070;
+}
+.coperation .swiper-scrollbar {
+  position: static;
+  height: 1px;
+  max-width: 600px;
+  margin-bottom: 20px;
+  background: #707070;
+}
+.coperation .swiper-scrollbar-drag {
+  background: #E63533;
+}
+.coperation .ticker-wrap {
+  padding: 40px 0;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #E63533;
+}
+.coperation .ticker {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+.coperation .item-collection-1 {
+  position: relative;
+  left: 0%;
+  animation: swap 20s linear infinite;
+}
+.coperation .item {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 50px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%, 100% {
+    left: 100%;
+  }
+}
+
 .news {
   /* Transition */
 }
@@ -762,6 +931,9 @@ h4 {
   .header .nav .nav_link {
     gap: 12px;
   }
+  .coperation .coperation_title_two {
+    margin-top: 100px;
+  }
   .error .glitched {
     font-size: 450px;
   }
@@ -921,8 +1093,36 @@ h4 {
   .galery .galery_wrapper .galery_card {
     padding-right: 10px;
   }
+  .coperation .coperation_form .form_input {
+    width: 100%;
+    flex-direction: column;
+  }
+  .coperation .coperation_form .form_input input {
+    width: 100%;
+    flex: auto;
+  }
+  .coperation .coperation_btn .main_btn {
+    width: 100%;
+  }
+  .coperation p {
+    max-width: 100%;
+  }
+  .coperation .swiper-wrapper .swiper-slide {
+    padding: 30px 25px;
+  }
+  .coperation .swiper-wrapper .swiper-slide .coperation_card img {
+    width: 128px;
+    max-width: 128px;
+  }
 }
 @media only screen and (max-width: 576px) {
+  .coperation .swiper-wrapper .swiper-slide {
+    padding: 28px 28px;
+  }
+  .coperation .swiper-wrapper .swiper-slide .coperation_card img {
+    width: 84px;
+    max-width: 84px;
+  }
   .news .news_slider {
     margin-top: 30px;
   }

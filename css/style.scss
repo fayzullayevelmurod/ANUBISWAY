@@ -340,6 +340,122 @@ h4 {
 
 // global block
 
+.bio {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+
+    .bio_title_top {
+        position: absolute;
+        top: 36px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .bio_line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .main_container {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .bio_left {
+        position: relative;
+        margin-top: 40px;
+
+        .bio_320 {
+            display: none;
+        }
+
+        .bio_mobile_line {
+            display: none;
+        }
+    }
+
+    .bio_left_logo {
+        position: absolute;
+        top: 178px;
+        right: -70px;
+        z-index: -1;
+        opacity: .3;
+    }
+
+    // .line_center {
+    //     border: 1px solid red;
+    //     width: 200px;
+    //     height: 1px;
+    //     background-color: $--Primary-White;
+    //     opacity: 0.5;
+    // }
+
+    .bio_right {
+        max-width: 864px;
+    }
+
+    .bio_right_title {
+        padding-top: 200px;
+
+        h2 {
+            color: $--Primary-White;
+            font-family: $Bebas;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 5px;
+            position: relative;
+
+            &::after {
+                content: ' ';
+                position: absolute;
+                left: -210px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                width: 200px;
+                height: 1px;
+                background-color: $--Primary-White;
+                opacity: 0.5;
+            }
+        }
+
+        h3 {
+            margin-top: 24px;
+            text-align: right;
+            color: $--Primary-Red;
+            font-family: $Bebas;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 5px;
+        }
+
+    }
+
+    .bio_right_text {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        p {
+            color: $--Primary-White;
+            font-family: $Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+    }
+}
+
 .donate {
     .donate_text {
         text-align: center;

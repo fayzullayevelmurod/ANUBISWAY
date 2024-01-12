@@ -96,7 +96,25 @@
         .bio_right {
             padding: 0 20px;
             max-width: 100%;
+            width: 100%;
             margin-bottom: 100px;
+
+            .bio_right_statistic {
+                padding: 0 20px;
+                span {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                }
+                .statistic_block {
+                    background-color: $--Primary-Red;
+                }
+
+                .statistic_in {
+                    background-color: $--Primary-Red;
+                }
+            }
         }
 
         .bio_left {
@@ -222,10 +240,9 @@
         }
     }
 
-
-
     .footer {
         .footer_table {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 36px;
@@ -413,6 +430,20 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 660px) {
+    .bio {
+        .bio_right_statistic {
+            flex-direction: column;
+            gap: 0;
+
+            .statistic_left,
+            .statistic_right {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {

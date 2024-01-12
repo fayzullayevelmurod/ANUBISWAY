@@ -397,7 +397,7 @@ h4 {
     // }
 
     .bio_right {
-        max-width: 864px;
+        width: 864px;
     }
 
     .bio_right_title {
@@ -455,12 +455,21 @@ h4 {
         }
     }
 
+    .commanda {
+        background-color: $--Primary-Red;
+    }
+
     .bio_right_statistic {
-        border: 1px solid red;
-        @include flex-center();
-        gap: 24px;
+        @include flex-start();
+        gap: 34px;
+
+        .statistic_left,
+        .statistic_right {
+            flex: 1;
+        }
 
         span {
+            margin-top: 24px;
             color: $--Primary-White;
             font-family: $Inter;
             font-size: 18px;
@@ -469,10 +478,42 @@ h4 {
             margin-bottom: 12px;
         }
 
+        .record {
+            border: 1px solid transparent !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 21px;
+
+            .statistic_in {
+                padding: 14px 0;
+                flex: 1;
+                border: 1px solid $--Primary-Red;
+                transform: skew(-20deg);
+
+                h6 {
+                    transform: skew(20deg);
+                    color: $--Primary-White;
+                    text-align: center;
+                    font-family: $Bebas;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%;
+                    letter-spacing: 1.2px;
+                }
+            }
+        }
+
         .statistic_block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 15px 0;
             border: 1px solid $--Primary-Red;
             transform: skew(-20deg);
+            gap: 21px;
+
 
             h6 {
                 transform: skew(20deg);

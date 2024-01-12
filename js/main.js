@@ -18,6 +18,20 @@
 // });
 // input mask
 
+// mobile menu
+let dropdown_link = document.querySelector('.dropdown_link button.main_link');
+let dropdown_link_dropdown = document.querySelector('.dropdown_link_dropdown');
+console.log(dropdown_link);
+
+dropdown_link.addEventListener('click', () => {
+  dropdown_link_dropdown.classList.toggle('active')
+})
+
+
+
+
+// mobile menu
+
 // newsSlider
 let swiper_news = new Swiper(".newsSwiper", {
     scrollbar: {

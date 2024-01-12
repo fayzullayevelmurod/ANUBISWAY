@@ -340,6 +340,61 @@ h4 {
 
 // global block
 
+// Index page
+.index_home {
+    .index_header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        gap: 23px;
+        align-items: center;
+        background: #000000;
+        padding: 14px 107px 15px 67px;
+    }
+
+    .image_wrap {
+        position: fixed;
+        top: 50%;
+        left: 85px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 48px;
+
+        .btn_group {
+            display: flex;
+            align-items: center;
+            // gap: 23px;
+        }
+    }
+
+    .home_links {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        a {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #E63533;
+            border-radius: 50%;
+            border: 1px solid black;
+            transition: .2s ease all;
+
+            &:hover {
+                background: black;
+                border-color: #E63533;
+            }
+        }
+    }
+}
+// Index page end
+
 .bio {
     max-width: 1920px;
     margin: 0 auto;

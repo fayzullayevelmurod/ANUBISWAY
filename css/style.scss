@@ -56,9 +56,9 @@ a {
     display: inline-block;
 }
 
-img {
-    max-width: 100%;
-}
+// img {
+//     max-width: 100%;
+// }
 
 span, label {
     display: inline-block;
@@ -346,6 +346,7 @@ h4 {
         position: fixed;
         top: 0;
         right: 0;
+        z-index: 3;
         display: flex;
         gap: 23px;
         align-items: center;
@@ -353,7 +354,7 @@ h4 {
         padding: 14px 107px 15px 67px;
     }
 
-    .image_wrap {
+    .home_wrap {
         position: fixed;
         top: 50%;
         left: 85px;
@@ -366,14 +367,25 @@ h4 {
         .btn_group {
             display: flex;
             align-items: center;
-            // gap: 23px;
+            gap: 23px;
+            padding-left: 23px;
         }
+
     }
 
+    .main_link {
+        span {
+            padding: 16px 23px 15px;
+        }
+    }
+    
     .home_links {
         display: flex;
         align-items: center;
         gap: 12px;
+        position: fixed;
+        left: 84px;
+        bottom: 36px;
 
         a {
             width: 44px;
@@ -390,6 +402,46 @@ h4 {
                 background: black;
                 border-color: #E63533;
             }
+        }
+    }
+
+    .home_slider {
+        overflow: visible;
+
+        &_wrap {
+            max-width: 858px;
+            margin: 0 auto;
+        }
+
+        .home_slider__item {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            // transform: skew(-30deg);
+            // overflow: hidden;
+            // clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        }
+        
+        img {
+            // position: absolute;
+            // bottom: 0;
+            // left: 0;
+            height: 100%;
+            // width: 100%;
+            // object-fit: contain/;
+            // transform: skew(30deg);
+
+            
+        }
+        
+        .swiper-slide {
+            // overflow: hidden;
+            // border: 1px solid red;
+            // transform: skew(-30deg);
+            height: 100vh;
+            position: relative;
         }
     }
 }

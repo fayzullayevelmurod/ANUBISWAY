@@ -272,6 +272,16 @@ h4 {
   background: #000000;
   padding: 14px 107px 15px 67px;
 }
+.index_home .index_header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  background: #000;
+  transform: skew(-25deg) translateX(-50%);
+}
 .index_home .home_wrap {
   position: fixed;
   top: 50%;
@@ -281,6 +291,7 @@ h4 {
   align-items: center;
   flex-direction: column;
   gap: 48px;
+  z-index: 3;
 }
 .index_home .home_wrap .btn_group {
   display: flex;
@@ -298,6 +309,7 @@ h4 {
   position: fixed;
   left: 84px;
   bottom: 36px;
+  z-index: 3;
 }
 .index_home .home_links a {
   width: 44px;
@@ -314,6 +326,16 @@ h4 {
   background: black;
   border-color: #E63533;
 }
+.index_home .home_bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: calc(-100% + 757px);
+  background: black;
+  transform: skew(-25deg);
+  z-index: 2;
+}
 .index_home .home_slider {
   overflow: visible;
 }
@@ -329,11 +351,76 @@ h4 {
   height: 100%;
 }
 .index_home .home_slider img {
-  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 102%;
 }
 .index_home .home_slider .swiper-slide {
   height: 100vh;
   position: relative;
+}
+.index_home .home_slider .swiper-slide:not(.swiper-slide-active) img {
+  filter: grayscale(100%);
+}
+.index_home .home_slider_navs {
+  position: fixed;
+  z-index: 3;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  padding: 30px 84px 30px 69px;
+}
+.index_home .home_slider_navs::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 104px;
+  background: #000;
+  left: 0;
+  top: 0;
+  transform: skew(-25deg) translateX(-50%);
+}
+.index_home .home_slider_navs .title {
+  flex-shrink: 0;
+}
+.index_home .home_slider_navs .btns {
+  margin: 0 24px 0 48px;
+}
+.index_home .home_slider_navs .btns button svg path {
+  stroke: white;
+}
+.index_home .home_slider_navs .btns button.swiper-button-disabled svg path {
+  stroke: #707070;
+}
+.index_home .home_slider_navs .btns .slider_pagination {
+  width: 358px;
+  height: 1px;
+  background: #707070;
+  position: relative;
+  margin: 7px 0;
+}
+.index_home .home_slider_navs .btns .slider_pagination span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  background: #E63533;
+}
+.index_home .home_slider_navs .slider_numbers {
+  color: var(--Primary-White, #FFF);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  width: 55px;
+  white-space: nowrap;
+}
+.index_home .home_slider_navs .slider_numbers span {
+  color: #707070;
 }
 
 .bio {
@@ -2063,5 +2150,30 @@ h4 {
     font-weight: 400;
     line-height: 100%;
     opacity: 0.5;
+  }
+}
+@media only screen and (max-height: 960px) {
+  .index_home .home_slider img {
+    height: 110%;
+  }
+}
+@media only screen and (max-height: 890px) {
+  .index_home .home_slider img {
+    height: 120%;
+  }
+}
+@media only screen and (max-height: 820px) {
+  .index_home .home_slider img {
+    height: 130%;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .index_home .home_slider img {
+    height: 140%;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .index_home .home_slider img {
+    height: 150%;
   }
 }/*# sourceMappingURL=style.css.map */

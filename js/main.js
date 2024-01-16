@@ -24,7 +24,28 @@ if (home_slider) {
     slidesPerView: 1,
     mousewheel: true,
     speed: 800,
+    pagination: {
+      el: ".home_slider_navs .slider_pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
+    },
   })
+
+  const makeFraction = async () => {
+      let real_idx = await homeSlider.realIndex + 1;
+      real_idx = real_idx < 10 ? '0' + String(real_idx) : real_idx;
+      let slid_length = await homeSlider.slides.length;
+      slid_length = slid_length < 10 ? '0' + String(slid_length) : slid_length;
+      let home_slide_count = document.querySelector('.home_slider_navs .slider_numbers');
+      home_slide_count.innerHTML = `${real_idx} <span>/ ${slid_length}</span>`;
+  }
+
+  homeSlider.on('slideChange', () => makeFraction())
+
+  makeFraction();
 }
 
 // newsSlider

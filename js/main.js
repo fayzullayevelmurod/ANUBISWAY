@@ -34,6 +34,20 @@ if (home_slider) {
     },
   })
 
+// mobile menu
+
+// newsSlider
+let swiper_news = new Swiper(".newsSwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
+    },
+  })
+
   const makeFraction = async () => {
       let real_idx = await homeSlider.realIndex + 1;
       real_idx = real_idx < 10 ? '0' + String(real_idx) : real_idx;
@@ -73,73 +87,60 @@ if (home_slider) {
 //     },
 // });
 
-// // newsSlider
-// let swiper_coperation = new Swiper(".coperationSwiper", {
-//     scrollbar: {
-//         el: ".swiper-scrollbar",
-//         // hide: true,
-//     },
-//     navigation: {
-//         nextEl: ".coperation-button-next",
-//         prevEl: ".coperation-button-prev",
-//     },
-//     breakpoints: {
-//         300: {
-//           slidesPerView: 2,
-//           // spaceBetween: 24,
-//         },
-//         768: {
-//           slidesPerView: 2,
-//           // spaceBetween: 24,
-//         },
-//         1024: {
-//           slidesPerView: 6,
-//           // spaceBetween: 24,
-//         },
-//     },
-// });
-
-// // newSlider
-// let swiper_new = new Swiper(".newSwiper", {
-//     spaceBetween: 24,
-//     initialSlide: 1,
-//     hashNavigation: {
-//       watchState: true,
-//     },
-//     loop: false,
-//     scrollbar: {
-//         el: ".swiper-scrollbar",
-//         // hide: true,
-//     },
-//     navigation: {
-//         nextEl: ".new-button-next",
-//         prevEl: ".new-button-prev",
-//     },
-// });
+// newSlider
+let swiper_new = new Swiper(".newSwiper", {
+    spaceBetween: 24,
+    initialSlide: 1,
+    autoplay: {
+      delay: 2000,
+    },
+    hashNavigation: {
+      watchState: true,
+    },
+    loop: false,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".new-button-next",
+        prevEl: ".new-button-prev",
+    },
+});
 
 
-// // newsSlider
-// let swiper_donate = new Swiper(".donateSwiper", {
-//   scrollbar: {
-//       el: ".swiper-scrollbar",
-//       // hide: true,
-//   },
-//   navigation: {
-//       nextEl: ".donate-button-next",
-//       prevEl: ".donate-button-prev",
-//   },
-//   breakpoints: {
-//       300: {
-//         slidesPerView: 2,
-//         // spaceBetween: 24,
-//       },
-//       768: {
-//         slidesPerView: 2,
-//         // spaceBetween: 24,
-//       },
-//       1024: {
-//         slidesPerView: 5,
-//         // spaceBetween: 24,
-//       },
-//   },
-// });
+// newsSlider
+let swiper_donate = new Swiper(".donateSwiper", {
+  scrollbar: {
+      el: ".swiper-scrollbar",
+      // hide: true,
+  },
+  navigation: {
+      nextEl: ".donate-button-next",
+      prevEl: ".donate-button-prev",
+  },
+  breakpoints: {
+      300: {
+        slidesPerView: 2,
+        // spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 2,
+        // spaceBetween: 24,
+      },
+      1024: {
+        slidesPerView: 5,
+        // spaceBetween: 24,
+      },
+  },
+});
+
+
+// mobile menu
+let dropdown_link = document.querySelector('.dropdown_link button.main_link');
+let dropdown_link_dropdown = document.querySelector('.dropdown_link_dropdown');
+console.log(dropdown_link);
+
+dropdown_link.addEventListener('click', () => {
+  dropdown_link_dropdown.classList.toggle('active')
+})

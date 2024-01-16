@@ -96,7 +96,25 @@
         .bio_right {
             padding: 0 20px;
             max-width: 100%;
+            width: 100%;
             margin-bottom: 100px;
+
+            .bio_right_statistic {
+                padding: 0 20px;
+                span {
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                }
+                .statistic_block {
+                    background-color: $--Primary-Red;
+                }
+
+                .statistic_in {
+                    background-color: $--Primary-Red;
+                }
+            }
         }
 
         .bio_left {
@@ -181,6 +199,17 @@
             display: block;
         }
     }
+
+    .catalog {
+        .catalog_card {
+            width: calc(100% / 2 - 17px);
+
+            img {
+                height: 480px;
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 993px) {
@@ -222,10 +251,9 @@
         }
     }
 
-
-
     .footer {
         .footer_table {
+            margin-top: 20px;
             display: flex;
             flex-direction: column;
             gap: 36px;
@@ -413,6 +441,56 @@
         }
     }
 
+    .shop {
+        .shop_cards {
+            padding: 0 10px 0 0;
+            gap: 48px;
+            margin: 48px 0 100px 0;
+        }
+
+        .shop_card {
+            width: 100%;
+        }
+    }
+
+    .thanks {
+        .thanks_in {
+            max-width: 100%;
+        }
+    }
+
+    .catalog {
+        .catalog_card_link {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .catalog {
+        .catalog_card {
+            width: calc(100%);
+            img {
+                height: 320px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .bio {
+        .bio_right_statistic {
+            flex-direction: column;
+            gap: 0;
+
+            .statistic_left,
+            .statistic_right {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -481,6 +559,7 @@
             }
         }
     }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -493,6 +572,65 @@
         position: relative;
         left: 0%;
         animation: swap 50s linear infinite;
+    }
+
+    .catalog {
+        .catalog_cards {
+            margin: 30px 0 60px 0;
+        }
+        .catalog_card {
+
+            .catalog_text {
+                margin-top: 30px;
+            }
+
+            h6 {
+                font-size: 30px;
+            }
+
+            .catalog_card_size {
+                gap: 5px;
+
+                .main_btn {
+                    height: 49px;
+                }
+            }
+        }
+    }
+
+    .thanks {
+        .thanks_in {
+            margin: 60px 0;
+            padding: 60px 20px 81px 20px;
+        }
+
+        .main_title {
+            margin: 30px 0 24px 0;
+        }
+
+        .main_link {
+            margin: 0 20px;
+            max-width: 100%;
+        }
+    }
+
+    .shop {
+        .shop_cards {
+            gap: 30px;
+            margin: 30px 0 60px 0;
+        }
+
+        .shop_card {
+            width: 100%;
+
+            h6 {
+                margin-top: 30px;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 1.5px;
+            }
+        }
     }
 
     .coperation {

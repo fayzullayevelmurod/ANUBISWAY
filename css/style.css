@@ -395,9 +395,6 @@ h4 {
   font-weight: 400;
   line-height: 130%;
 }
-.bio .commanda {
-  background-color: #E63533;
-}
 .bio .bio_right_statistic {
   display: flex;
   align-items: start;
@@ -428,6 +425,10 @@ h4 {
   flex: 1;
   border: 1px solid #E63533;
   transform: skew(-20deg);
+  transition: 0.2s ease;
+}
+.bio .bio_right_statistic .record .statistic_in:hover {
+  background-color: #E63533;
 }
 .bio .bio_right_statistic .record .statistic_in h6 {
   transform: skew(20deg);
@@ -447,6 +448,7 @@ h4 {
   padding: 15px 0;
   border: 1px solid #E63533;
   transform: skew(-20deg);
+  transition: 0.2s ease;
   gap: 21px;
 }
 .bio .bio_right_statistic .statistic_block h6 {
@@ -459,6 +461,9 @@ h4 {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.2px;
+}
+.bio .bio_right_statistic .statistic_block:hover {
+  background-color: #E63533;
 }
 
 .donate .donate_text {
@@ -899,8 +904,8 @@ h4 {
   align-items: center;
   gap: 12px;
 }
-.coperation .coperation_pagination .coperation_btns .news-button-prev,
-.coperation .coperation_pagination .coperation_btns .news-button-next {
+.coperation .coperation_pagination .coperation_btns .coperation-button-prev,
+.coperation .coperation_pagination .coperation_btns .coperation-button-next {
   cursor: pointer;
   position: static;
 }
@@ -1222,6 +1227,9 @@ h4 {
 }
 .contact {
   text-align: center;
+}
+.contact .main_container {
+  max-width: 864px;
 }
 .contact .contact_form {
   margin-bottom: 36px;

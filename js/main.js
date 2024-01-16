@@ -18,14 +18,7 @@
 // });
 // input mask
 
-// mobile menu
-let dropdown_link = document.querySelector('.dropdown_link button.main_link');
-let dropdown_link_dropdown = document.querySelector('.dropdown_link_dropdown');
-console.log(dropdown_link);
 
-dropdown_link.addEventListener('click', () => {
-  dropdown_link_dropdown.classList.toggle('active')
-})
 
 
 
@@ -88,6 +81,9 @@ let swiper_coperation = new Swiper(".coperationSwiper", {
 let swiper_new = new Swiper(".newSwiper", {
     spaceBetween: 24,
     initialSlide: 1,
+    autoplay: {
+      delay: 2000,
+    },
     hashNavigation: {
       watchState: true,
     },
@@ -128,3 +124,13 @@ let swiper_donate = new Swiper(".donateSwiper", {
       },
   },
 });
+
+
+// mobile menu
+let dropdown_link = document.querySelector('.dropdown_link button.main_link');
+let dropdown_link_dropdown = document.querySelector('.dropdown_link_dropdown');
+console.log(dropdown_link);
+
+dropdown_link.addEventListener('click', () => {
+  dropdown_link_dropdown.classList.toggle('active')
+})

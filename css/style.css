@@ -1637,14 +1637,14 @@ h4 {
   width: 100%;
 }
 .shop .shop_card .shop_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 .shop .shop_card .main_btn {
   z-index: -1;
   position: absolute;
-  left: 45%;
-  top: 45%;
-  transform: skew(30deg), translate(-50%, -50%);
 }
 .shop .shop_card .shop_main_img {
   filter: grayscale(100%);

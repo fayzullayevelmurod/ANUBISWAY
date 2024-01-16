@@ -1981,15 +1981,16 @@ h4 {
         }
         
         .shop_img {
+            @include flex-full-center();
             position: relative;
         }
 
         .main_btn {
             z-index: -1;
             position: absolute;
-            left: 45%;
-            top: 45%;
-            transform: skew(30deg), translate(-50%, -50%);
+            // left: 50%;
+            // top: 50%;
+            // transform: scale(30deg), translate(-50%, -50%);
         }
 
         .shop_main_img {

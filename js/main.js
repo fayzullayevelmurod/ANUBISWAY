@@ -18,10 +18,21 @@
 // });
 // input mask
 
-
-
-
-
+let home_slider = document.querySelector('.home_slider');
+if (home_slider) {
+  let homeSlider = new Swiper(home_slider, {
+    slidesPerView: 1,
+    mousewheel: true,
+    speed: 800,
+    pagination: {
+      el: ".home_slider_navs .slider_pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
+    },
+  })
 
 // mobile menu
 
@@ -32,50 +43,49 @@ let swiper_news = new Swiper(".newsSwiper", {
         // hide: true,
     },
     navigation: {
-        nextEl: ".news-button-next",
-        prevEl: ".news-button-prev",
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
     },
-    breakpoints: {
-        640: {
-          slidesPerView: 1,
-          spaceBetween: 24,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 24,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-    },
-});
+  })
+
+  const makeFraction = async () => {
+      let real_idx = await homeSlider.realIndex + 1;
+      real_idx = real_idx < 10 ? '0' + String(real_idx) : real_idx;
+      let slid_length = await homeSlider.slides.length;
+      slid_length = slid_length < 10 ? '0' + String(slid_length) : slid_length;
+      let home_slide_count = document.querySelector('.home_slider_navs .slider_numbers');
+      home_slide_count.innerHTML = `${real_idx} <span>/ ${slid_length}</span>`;
+  }
+  homeSlider.on('slideChange', () => makeFraction())
+
+  makeFraction();
+}
 
 // newsSlider
-let swiper_coperation = new Swiper(".coperationSwiper", {
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        // hide: true,
-    },
-    navigation: {
-        nextEl: ".coperation-button-next",
-        prevEl: ".coperation-button-prev",
-    },
-    breakpoints: {
-        300: {
-          slidesPerView: 2,
-          // spaceBetween: 24,
-        },
-        768: {
-          slidesPerView: 2,
-          // spaceBetween: 24,
-        },
-        1024: {
-          slidesPerView: 6,
-          // spaceBetween: 24,
-        },
-    },
-});
+// let swiper_news = new Swiper(".newsSwiper", {
+//     scrollbar: {
+//         el: ".swiper-scrollbar",
+//         // hide: true,
+//     },
+//     navigation: {
+//         nextEl: ".news-button-next",
+//         prevEl: ".news-button-prev",
+//     },
+//     breakpoints: {
+//         640: {
+//           slidesPerView: 1,
+//           spaceBetween: 24,
+//         },
+//         768: {
+//           slidesPerView: 2,
+//           spaceBetween: 24,
+//         },
+//         1024: {
+//           slidesPerView: 3,
+//           spaceBetween: 24,
+//         },
+//     },
+// });
 
 // newSlider
 let swiper_new = new Swiper(".newSwiper", {

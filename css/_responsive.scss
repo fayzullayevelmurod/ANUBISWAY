@@ -430,6 +430,24 @@
         }
     }
 
+    .shop {
+        .shop_cards {
+            padding: 0 10px 0 0;
+            gap: 48px;
+            margin: 48px 0 100px 0;
+        }
+
+        .shop_card {
+            width: 100%;
+        }
+    }
+
+    .thanks {
+        .thanks_in {
+            max-width: 100%;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 660px) {
@@ -524,6 +542,41 @@
         position: relative;
         left: 0%;
         animation: swap 50s linear infinite;
+    }
+
+    .thanks {
+        .thanks_in {
+            margin: 60px 0;
+            padding: 60px 20px 81px 20px;
+        }
+
+        .main_title {
+            margin: 30px 0 24px 0;
+        }
+
+        .main_link {
+            margin: 0 20px;
+            max-width: 100%;
+        }
+    }
+
+    .shop {
+        .shop_cards {
+            gap: 30px;
+            margin: 30px 0 60px 0;
+        }
+
+        .shop_card {
+            width: 100%;
+
+            h6 {
+                margin-top: 30px;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 1.5px;
+            }
+        }
     }
 
     .coperation {

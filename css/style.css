@@ -1633,6 +1633,9 @@ h4 {
 .shop .shop_card {
   width: calc(50% - 17px);
 }
+.shop .shop_card img {
+  width: 100%;
+}
 .shop .shop_card .shop_img {
   position: relative;
 }

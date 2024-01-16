@@ -1975,6 +1975,10 @@ h4 {
 
     .shop_card {
         width: calc(100% / 2 - 17px);
+
+        img {
+            width: 100%;
+        }
         
         .shop_img {
             position: relative;

@@ -42,7 +42,6 @@ if (home_slider) {
       let home_slide_count = document.querySelector('.home_slider_navs .slider_numbers');
       home_slide_count.innerHTML = `${real_idx} <span>/ ${slid_length}</span>`;
   }
-
   homeSlider.on('slideChange', () => makeFraction())
 
   makeFraction();

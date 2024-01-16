@@ -363,6 +363,10 @@ h4 {
             background: #000;
             transform: skew(-25deg) translateX(-50%);
         }
+
+        a {
+            height: 48px;
+        }
     }
 
     .home_wrap {
@@ -375,6 +379,10 @@ h4 {
         flex-direction: column;
         gap: 48px;
         z-index: 3;
+
+        .mobile {
+            display: none;
+        }
 
         .btn_group {
             display: flex;
@@ -419,13 +427,13 @@ h4 {
     }
 
     .home_bg {
-        position: fixed;
-        width: 100%;
+        position: absolute;
+        width: 100vw;
         height: 100%;
         bottom: 0;
-        left: calc(-100% + 757px);
+        left: 0;
         background: black;
-        transform: skew(-25deg);
+        transform: skew(-25deg) translateX(-85%);
         z-index: 2;
     }
 
@@ -435,6 +443,7 @@ h4 {
         &_wrap {
             max-width: 858px;
             margin: 0 auto;
+            position: relative;
         }
 
         .home_slider__item {
@@ -460,6 +469,10 @@ h4 {
 
             
         }
+
+        .mobile {
+            display: none;
+        }
         
         .swiper-slide {
             // overflow: hidden;
@@ -467,6 +480,7 @@ h4 {
             // transform: skew(-30deg);
             height: 100vh;
             position: relative;
+            border: 1px solid beige;
         }
 
         .swiper-slide:not(.swiper-slide-active) {

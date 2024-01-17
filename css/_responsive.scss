@@ -761,13 +761,23 @@
     }
 
     .header {
+        padding: 10px 0;
 
         .left_logo_media {
             width: 23px;
+            height: 68px;
+
+            img {
+                width: 100%;
+            }
         }
 
         .logo_text {
             width: 135px;
+
+            img {
+                width: 100%;
+            }
         }
     }   
 

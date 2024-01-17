@@ -18,6 +18,22 @@
 // });
 // input mask
 
+let burger_open = document.querySelectorAll('.burger_open');
+let header_mobile_menu = document.querySelector('.menu_mobile');
+let menu_close = document.querySelector('.mobile_menu_close');
+if (burger_open.length) {
+  burger_open.forEach(btn => {
+    btn.onclick = () => {
+      header_mobile_menu.classList.remove("active_end");
+      header_mobile_menu.classList.add("active");
+    }
+  })
+  menu_close.onclick = () => {
+    header_mobile_menu.classList.remove("active");
+    header_mobile_menu.classList.add("active_end");
+  }
+}
+
 let home_slider = document.querySelector('.home_slider');
 if (home_slider) {
   let homeSlider = new Swiper(home_slider, {

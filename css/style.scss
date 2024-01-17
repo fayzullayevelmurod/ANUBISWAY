@@ -624,6 +624,35 @@ h4 {
     height: 100%;
     z-index: 3;
     background-color: $--Primary-Black;
+    padding-bottom: 32px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mobile_menu_close {
+        position: fixed;
+        top: 42px;
+        right: 20px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        
+        a {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            img {
+                height: 180px;
+            }
+        }
+    }
 
     .mobile_link {
         margin: 65px 0;
@@ -631,6 +660,10 @@ h4 {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
+        .mobile_item {
+            opacity: 0;
+        }
     }
 
     .dropdown_link {
@@ -656,6 +689,164 @@ h4 {
             display: block;
         }
     }
+
+    .mobile_social_media {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #E63533;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+        }
+    }
+
+    .mobile_bottom {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 36px;
+        opacity: 0;
+
+        a {
+            color: var(--Primary-White, #FFF);
+            text-align: center;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #fff;
+        }
+
+        span {
+            color: var(--Primary-White, #FFF);
+            text-align: center;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 100%;
+            opacity: 0.5;
+        }
+    }
+}
+
+@keyframes menuActive {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100vh;
+    }
+}
+
+.menu_mobile.active {
+    display: block;
+    animation: menuActive .4s linear 1;
+
+    @keyframes logoActive {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .logo {
+        animation: logoActive .8s linear forwards;
+        animation-delay: .4s;
+    }
+
+    .mobile_link {
+        @keyframes linkItem {
+            from {
+                opacity: 0;
+                transform: translateX(20%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .mobile_item {
+            animation: linkItem .6s ease forwards;
+            animation-delay: .35s;
+
+            @for $i from 2 through 7 {
+                &:nth-child(#{$i}) {
+                    animation-delay: calc(.35s + $i * .05s);
+                }
+            }
+            
+        }
+    }
+
+    @keyframes socialMedia {
+        from {
+            opacity: 0;
+            transform: translateY(80%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .mobile_social_media {
+        a {
+            animation: socialMedia .6s ease forwards;
+            animation-delay: 1.05s;
+
+            &:nth-child(2) {
+                animation-delay: 1.15s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: 1.25s;
+            }
+        }
+    }
+
+    @keyframes mobileBottom {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .mobile_bottom {
+        animation: mobileBottom .6s ease forwards;
+        animation-delay: 1.4s;
+    }
+}
+
+@keyframes menuActiveEnd {
+    from {
+        display: block;
+        height: 100vh;
+    }
+    to {
+        display: block;
+        height: 0;
+    }
+}
+
+.menu_mobile.active_end {
+    display: none;
+    animation: menuActiveEnd .4s linear 1;
 }
 
 .bio {

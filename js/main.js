@@ -18,48 +18,7 @@
 // });
 // input mask
 
-let home_slider = document.querySelector('.home_slider');
-if (home_slider) {
-  let homeSlider = new Swiper(home_slider, {
-    slidesPerView: 1,
-    mousewheel: true,
-    speed: 800,
-    pagination: {
-      el: ".home_slider_navs .slider_pagination",
-      type: "progressbar",
-    },
-    navigation: {
-      nextEl: ".home_slider_navs .next_btn",
-      prevEl: ".home_slider_navs .prev_btn",
-    },
-  })
 
-// mobile menu
-
-// newsSlider
-let swiper_news = new Swiper(".newsSwiper", {
-    scrollbar: {
-        el: ".swiper-scrollbar",
-        // hide: true,
-    },
-    navigation: {
-      nextEl: ".home_slider_navs .next_btn",
-      prevEl: ".home_slider_navs .prev_btn",
-    },
-  })
-
-  const makeFraction = async () => {
-      let real_idx = await homeSlider.realIndex + 1;
-      real_idx = real_idx < 10 ? '0' + String(real_idx) : real_idx;
-      let slid_length = await homeSlider.slides.length;
-      slid_length = slid_length < 10 ? '0' + String(slid_length) : slid_length;
-      let home_slide_count = document.querySelector('.home_slider_navs .slider_numbers');
-      home_slide_count.innerHTML = `${real_idx} <span>/ ${slid_length}</span>`;
-  }
-  homeSlider.on('slideChange', () => makeFraction())
-
-  makeFraction();
-}
 
 // newsSlider
 let swiper_news = new Swiper(".coperationSwiper", {
@@ -109,37 +68,128 @@ let swiper_new = new Swiper(".newSwiper", {
 });
 
 
+
+// donateSlider
+let donateSwiper = document.querySelector('.donateSwiper');
+if(donateSwiper){
+  let swiper_donate = new Swiper(donateSwiper, {
+  
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".donate-button-next",
+        prevEl: ".donate-button-prev",
+    },
+    breakpoints: {
+        300: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 5,
+          // spaceBetween: 24,
+        },
+    },
+  });
+  function checkRadio (){
+    let radio_btn = document.querySelectorAll('.slider_radio .radio_btn');
+    console.log('salom');
+    radio_btn.forEach(btn => {
+      btn.onclick = () => {
+        radio_btn.forEach(btn2 => {
+          if(btn2.querySelector('input[type="radio"]').checked) {
+            btn2.classList.add('active')
+          } else {
+            btn2.classList.remove('active')
+          }
+        })
+      }
+    }) 
+  }
+  checkRadio()
+  swiper_donate.on('slideChange', () => checkRadio())
+};
+
 // newsSlider
-let swiper_donate = new Swiper(".donateSwiper", {
+let swiper_newss = new Swiper(".newsSwiper", {
   scrollbar: {
       el: ".swiper-scrollbar",
       // hide: true,
   },
   navigation: {
-      nextEl: ".donate-button-next",
-      prevEl: ".donate-button-prev",
+      nextEl: ".news-button-next",
+      prevEl: ".news-button-prev",
   },
   breakpoints: {
       300: {
-        slidesPerView: 2,
+        slidesPerView: 1,
         // spaceBetween: 24,
       },
       768: {
         slidesPerView: 2,
         // spaceBetween: 24,
       },
-      1024: {
-        slidesPerView: 5,
+      993: {
+        slidesPerView: 3,
         // spaceBetween: 24,
       },
   },
 });
 
+let home_slider = document.querySelector('.home_slider');
+if (home_slider) {
+  let homeSlider = new Swiper(home_slider, {
+    slidesPerView: 1,
+    mousewheel: true,
+    speed: 800,
+    pagination: {
+      el: ".home_slider_navs .slider_pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
+    },
+  })
+
+// mobile menu
+
+// newsSlider
+let swiper_news = new Swiper(".newsSwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+      nextEl: ".home_slider_navs .next_btn",
+      prevEl: ".home_slider_navs .prev_btn",
+    },
+  })
+
+  const makeFraction = async () => {
+      let real_idx = await homeSlider.realIndex + 1;
+      real_idx = real_idx < 10 ? '0' + String(real_idx) : real_idx;
+      let slid_length = await homeSlider.slides.length;
+      slid_length = slid_length < 10 ? '0' + String(slid_length) : slid_length;
+      let home_slide_count = document.querySelector('.home_slider_navs .slider_numbers');
+      home_slide_count.innerHTML = `${real_idx} <span>/ ${slid_length}</span>`;
+  }
+  homeSlider.on('slideChange', () => makeFraction())
+
+  makeFraction();
+}
+
 
 // mobile menu
 let dropdown_link = document.querySelector('.dropdown_link button.main_link');
 let dropdown_link_dropdown = document.querySelector('.dropdown_link_dropdown');
-console.log(dropdown_link);
+// console.log(dropdown_link);
 
 dropdown_link.addEventListener('click', () => {
   dropdown_link_dropdown.classList.toggle('active')
@@ -160,4 +210,16 @@ if (burger_open.length) {
     header_mobile_menu.classList.remove("active");
     header_mobile_menu.classList.add("active_end");
   }
+}
+
+
+let radio_btn = document.querySelectorAll('.radio_btn');
+
+if (radio_btn.length){
+  radio_btn.forEach(btn => {
+    let radio_input = btn.querySelector('input[type="radio"]')
+    btn.onclick = () => {
+      radio_input.click()
+    }
+  })
 }

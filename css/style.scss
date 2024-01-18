@@ -338,6 +338,11 @@ h4 {
 }
 
 .basket {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
     padding: 24px 0;
     background-color: $--Primary-Red;
 
@@ -353,6 +358,10 @@ h4 {
         position: relative;
         background-color: #000;
         @include flex-full-center();
+
+        img {
+            width: 20px;
+        }
 
         .count {
             background-color: $--Primary-White;
@@ -386,6 +395,22 @@ h4 {
     }
 }
 
+.footer_basket {
+    margin-bottom: 120px;
+}
+
+// .radio_btn {
+//     > input { 
+//         // display:none;
+//     }
+//     > button{
+//         cursor:pointer; 
+//     }
+//     > input:checked + button{ 
+//         background-color: $--Primary-Red;
+//     }
+    
+// }
 // global block
 
 // Index page
@@ -1072,6 +1097,23 @@ h4 {
         }
     }
 
+    .slider_radio {
+        .radio_btn {
+            > input { 
+                display:none;
+            }
+            > button{
+                cursor:pointer; 
+            }
+            > input:checked + button{ 
+                background-color: $--Primary-Red;
+            }
+        }
+        .radio_btn.active {
+            background-color: yellow;
+        }
+    }
+
     .select_sum {
         text-align: center;
         margin: 120px 0;
@@ -1086,20 +1128,35 @@ h4 {
             margin-bottom: 36px;
         }
 
+        .radio_btn {
+            > input { 
+                display:none;
+            }
+            > button{
+                cursor:pointer; 
+            }
+            > 
+            input:checked + button{ 
+                background-color: $--Primary-Red;
+            }
+        }
+
         .select_btns {
             display: flex;
             justify-content: center;
             gap: 20px;
+
         }
-
-        .main_btn {
-            border: 1px solid $--Primary-Red;
-            background-color: transparent;
-            width: 120px;
-            @include transition();
-
-            &:hover {
-                background-color: $--Primary-Red;
+        .radio_btn {
+            .main_btn {
+                border: 1px solid $--Primary-Red;
+                background-color: transparent;
+                width: 120px;
+                @include transition();
+    
+                &:hover {
+                    background-color: $--Primary-Red;
+                }
             }
         }
     }
@@ -1130,9 +1187,9 @@ h4 {
                 user-select: none;
             }
 
-            &:hover {
-                background-color: $--Primary-Red;
-            }
+            // &:hover {
+            //     background-color: $--Primary-Red;
+            // }
         }
 
         .swiper-slide-active {
@@ -2349,6 +2406,19 @@ h4 {
                 opacity: 1;
             }
         }
+
+        .radio_btn {
+            > input { 
+                display:none;
+            }
+            > button{
+                cursor:pointer; 
+            }
+            > input:checked + button{ 
+                background-color: $--Primary-Red;
+            }
+            
+        }
     }
 
     .catalog_card_new {
@@ -2448,15 +2518,20 @@ h4 {
         @include flex-center();
         gap: 20px;
 
-        .main_btn {
+        .radio_btn {
             flex: 1;
-            background-color: transparent;
-            border: 1px solid $--Primary-Red;
-            @include transition();
+            
+            .main_btn {
+                @include transition();
+                border: 1px solid $--Primary-Red;
+                background-color: transparent;
+                width: 100%;
 
-            &:hover {
-                background-color: $--Primary-Red;
+                &:hover {
+                    background-color: $--Primary-Red;
+                }
             }
+
         }
     }
 }

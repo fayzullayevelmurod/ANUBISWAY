@@ -262,6 +262,11 @@ h4 {
   }
 }
 .basket {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
   padding: 24px 0;
   background-color: #E63533;
 }
@@ -280,6 +285,9 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.basket .basket_icon img {
+  width: 20px;
 }
 .basket .basket_icon .count {
   background-color: #FFF;
@@ -309,6 +317,10 @@ h4 {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.2px;
+}
+
+.footer_basket {
+  margin-bottom: 120px;
 }
 
 .index_home .index_header {
@@ -879,6 +891,18 @@ h4 {
 .donate .donate_text h3 span {
   color: #E63533;
 }
+.donate .slider_radio .radio_btn > input {
+  display: none;
+}
+.donate .slider_radio .radio_btn > button {
+  cursor: pointer;
+}
+.donate .slider_radio .radio_btn > input:checked + button {
+  background-color: #E63533;
+}
+.donate .slider_radio .radio_btn.active {
+  background-color: yellow;
+}
 .donate .select_sum {
   text-align: center;
   margin: 120px 0;
@@ -892,18 +916,27 @@ h4 {
   letter-spacing: 1.6px;
   margin-bottom: 36px;
 }
+.donate .select_sum .radio_btn > input {
+  display: none;
+}
+.donate .select_sum .radio_btn > button {
+  cursor: pointer;
+}
+.donate .select_sum .radio_btn > input:checked + button {
+  background-color: #E63533;
+}
 .donate .select_sum .select_btns {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.donate .select_sum .main_btn {
+.donate .select_sum .radio_btn .main_btn {
   border: 1px solid #E63533;
   background-color: transparent;
   width: 120px;
   transition: 0.2s ease;
 }
-.donate .select_sum .main_btn:hover {
+.donate .select_sum .radio_btn .main_btn:hover {
   background-color: #E63533;
 }
 .donate .donate_slider h6 {
@@ -931,9 +964,6 @@ h4 {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-.donate .swiper-wrapper .swiper-slide:hover {
-  background-color: #E63533;
 }
 .donate .swiper-wrapper .swiper-slide-active img {
   filter: grayscale(0%);
@@ -1963,6 +1993,15 @@ h4 {
 .catalog .catalog_card:hover .catalog_card_size {
   opacity: 1;
 }
+.catalog .catalog_card .radio_btn > input {
+  display: none;
+}
+.catalog .catalog_card .radio_btn > button {
+  cursor: pointer;
+}
+.catalog .catalog_card .radio_btn > input:checked + button {
+  background-color: #E63533;
+}
 .catalog .catalog_card_new .catalog_img_in {
   position: absolute;
   width: 100%;
@@ -2049,13 +2088,16 @@ h4 {
   align-items: center;
   gap: 20px;
 }
-.catalog .catalog_card_size .main_btn {
+.catalog .catalog_card_size .radio_btn {
   flex: 1;
-  background-color: transparent;
-  border: 1px solid #E63533;
-  transition: 0.2s ease;
 }
-.catalog .catalog_card_size .main_btn:hover {
+.catalog .catalog_card_size .radio_btn .main_btn {
+  transition: 0.2s ease;
+  border: 1px solid #E63533;
+  background-color: transparent;
+  width: 100%;
+}
+.catalog .catalog_card_size .radio_btn .main_btn:hover {
   background-color: #E63533;
 }
 

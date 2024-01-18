@@ -299,28 +299,40 @@
                 <h6>
                     Выберите сууму
                 </h6>
-                <div class="select_btns">
-                    <button class="main_btn">
-                        <span>
-                            500
-                        </span>
-                    </button>
-                    <button class="main_btn">
-                        <span>
-                            1 000
-                        </span>
-                    </button>
-                    <button class="main_btn">
-                        <span>
-                            5 000
-                        </span>
-                    </button>
-                    <button class="main_btn">
-                        <span>
-                            Другая
-                        </span>
-                    </button>
-                </div>
+                <form class="select_btns">
+                    <label class="radio_btn">
+                        <input type="radio" name="btn"  class="input-hidden" />
+                        <button type="button" class="main_btn">
+                            <span>
+                                500
+                            </span>
+                        </button>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="btn" class="input-hidden" />
+                        <button type="button" class="main_btn">
+                            <span>
+                                1000
+                            </span>
+                        </button>
+                    </label>
+                    <label  class="radio_btn">
+                        <input type="radio" name="btn" class="input-hidden" />
+                        <button type="button" class="main_btn">
+                            <span>
+                                5000
+                            </span>
+                        </button>
+                    </label>
+                    <label class="radio_btn">
+                        <input type="radio" name="btn"  class="input-hidden" />
+                        <button type="button" class="main_btn">
+                            <span>
+                                Другая
+                            </span>
+                        </button>
+                    </label>
+                </form>
             </div>
 
             <div class="main_container">
@@ -329,33 +341,38 @@
                         Способ оплаты
                     </h6>
                     <div class="swiper donateSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="#" class="donate_card">
+                        <form class="swiper-wrapper slider_radio">
+                            <label class="swiper-slide radio_btn">
+                                <input type="radio" name="btn"  class="input-hidden" />
+                     
                                     <img src="./images/donate1.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="donate_card">
+                           
+                            </label>
+                            <label class="swiper-slide radio_btn">
+                                <input type="radio" name="btn"  class="input-hidden" />
+                                <button type="button" class="donate_card">
                                     <img src="./images/donate2.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="donate_card">
+                                </button>
+                            </label>
+                            <label class="swiper-slide radio_btn">
+                                <input type="radio" name="btn"  class="input-hidden" />
+                                <button type="button" class="donate_card">
                                     <img src="./images/donate3.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="donate_card">
+                                </button>
+                            </label>
+                            <label class="swiper-slide radio_btn">
+                                <input type="radio" name="btn"  class="input-hidden" />
+                                <button type="button" class="donate_card">
                                     <img src="./images/donate4.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="#" class="donate_card">
+                                </button>
+                            </label>
+                            <label class="swiper-slide radio_btn">
+                                <input type="radio" name="btn"  class="input-hidden" />
+                                <button type="button" class="donate_card">
                                     <img src="./images/donate5.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
+                                </button>
+                            </label>
+                        </form>
                         <div class="donate_pagination">
                             <div class="swiper-scrollbar"></div>
                             <div class="donate_btns">

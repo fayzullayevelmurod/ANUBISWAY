@@ -62,30 +62,30 @@ let swiper_news = new Swiper(".newsSwiper", {
 }
 
 // newsSlider
-// let swiper_news = new Swiper(".newsSwiper", {
-//     scrollbar: {
-//         el: ".swiper-scrollbar",
-//         // hide: true,
-//     },
-//     navigation: {
-//         nextEl: ".news-button-next",
-//         prevEl: ".news-button-prev",
-//     },
-//     breakpoints: {
-//         640: {
-//           slidesPerView: 1,
-//           spaceBetween: 24,
-//         },
-//         768: {
-//           slidesPerView: 2,
-//           spaceBetween: 24,
-//         },
-//         1024: {
-//           slidesPerView: 3,
-//           spaceBetween: 24,
-//         },
-//     },
-// });
+let swiper_news = new Swiper(".coperationSwiper", {
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        // hide: true,
+    },
+    navigation: {
+        nextEl: ".coperation-button-next",
+        prevEl: ".coperation-button-prev",
+    },
+    breakpoints: {
+        320: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        768: {
+          slidesPerView: 2,
+          // spaceBetween: 24,
+        },
+        1024: {
+          slidesPerView: 6,
+          // spaceBetween: 24,
+        },
+    },
+});
 
 // newSlider
 let swiper_new = new Swiper(".newSwiper", {

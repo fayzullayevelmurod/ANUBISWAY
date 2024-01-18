@@ -1099,18 +1099,22 @@ h4 {
 
     .slider_radio {
         .radio_btn {
+            user-select: none;
+            cursor: pointer;
+
             > input { 
                 display:none;
             }
             > button{
                 cursor:pointer; 
             }
-            > input:checked + button{ 
-                background-color: $--Primary-Red;
-            }
+            // > input:checked + button{ 
+            //     background-color: $--Primary-Red;
+            // }
         }
+
         .radio_btn.active {
-            background-color: yellow;
+            background-color: $--Primary-Red;
         }
     }
 

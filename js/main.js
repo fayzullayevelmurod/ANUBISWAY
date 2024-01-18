@@ -97,24 +97,24 @@ if(donateSwiper){
         },
     },
   });
-  function checkRadio (){
-    let radio_btn = document.querySelectorAll('.slider_radio .radio_btn');
-    console.log('salom');
-    radio_btn.forEach(btn => {
-      btn.onclick = () => {
-        radio_btn.forEach(btn2 => {
-          if(btn2.querySelector('input[type="radio"]').checked) {
-            btn2.classList.add('active')
-          } else {
-            btn2.classList.remove('active')
-          }
-        })
-      }
-    }) 
-  }
-  checkRadio()
+  checkRadio();
   swiper_donate.on('slideChange', () => checkRadio())
 };
+
+function checkRadio (){
+  let radio_btn = document.querySelectorAll('.slider_radio .radio_btn');
+  radio_btn.forEach(btn => {
+    btn.addEventListener('click', function () {
+      radio_btn.forEach(btn2 => {
+        if(btn2.querySelector('input[type="radio"]').checked) {
+          btn2.classList.add('active')
+        } else {
+          btn2.classList.remove('active')
+        }
+      })
+    })
+  }) 
+}
 
 // newsSlider
 let swiper_newss = new Swiper(".newsSwiper", {

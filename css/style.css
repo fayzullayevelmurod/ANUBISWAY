@@ -891,17 +891,20 @@ h4 {
 .donate .donate_text h3 span {
   color: #E63533;
 }
+.donate .slider_radio .radio_btn {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
 .donate .slider_radio .radio_btn > input {
   display: none;
 }
 .donate .slider_radio .radio_btn > button {
   cursor: pointer;
 }
-.donate .slider_radio .radio_btn > input:checked + button {
-  background-color: #E63533;
-}
 .donate .slider_radio .radio_btn.active {
-  background-color: yellow;
+  background-color: #E63533;
 }
 .donate .select_sum {
   text-align: center;

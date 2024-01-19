@@ -1587,6 +1587,7 @@ h4 {
 .error {
   margin-bottom: 120px;
   margin-top: 96px;
+  position: relative;
   text-align: center;
 }
 .error .error_title {
@@ -1597,17 +1598,22 @@ h4 {
   line-height: 100%;
   letter-spacing: 2.6px;
 }
-.error h1 {
-  margin: 48px 0;
-  font-size: 500px;
-  color: #222222;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
-}
 .error .main_btn {
   margin-top: 48px;
   width: 420px;
+}
+
+.title_error {
+  position: relative;
+  width: 100%;
+}
+.title_error h1 {
+  font-size: 8rem;
+  font-family: "Bebas Neue", sans-serif;
+  text-align: center;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 900;
 }
 
 .glitch-window {
@@ -1616,7 +1622,6 @@ h4 {
   left: -2px;
   width: 100%;
   color: #222222;
-  background-repeat: no-repeat;
   text-shadow: 2px 0 #F9F8F8, -1px 0 yellow, -2px 0 green;
   overflow: hidden;
   animation: crt-me 2500ms infinite linear alternate-reverse;
@@ -1657,6 +1662,25 @@ h4 {
     clip: rect(82px, 9999px, 64px, 0);
   }
 }
+.inspiration-button {
+  font-family: Helvetica, sans-serif;
+  position: fixed;
+  display: inline-block;
+  z-index: 100;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 80px;
+  background: linear-gradient(270deg, #1e80dc, #c61590);
+  transition: transform 250ms ease;
+}
+.inspiration-button:hover, .inspiration-button:focus, .inspiration-button:active {
+  transform: translate(-50%, -10%);
+}
+
 .contact {
   text-align: center;
 }

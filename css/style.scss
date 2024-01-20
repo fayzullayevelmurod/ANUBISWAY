@@ -2631,7 +2631,6 @@ h4 {
 
 .item_section {
     .main_container {
-        border: 1px solid red;
         margin: 36px auto 120px auto;
         @include flex-start();
         gap: 58px;
@@ -2643,7 +2642,6 @@ h4 {
 
     .item_right {
         flex: 1;
-        border: 1px solid red;
     }
 
     .item_cards {
@@ -2728,6 +2726,7 @@ h4 {
     }
 
     .item_size {
+        max-width: 420px;
         p {
             color: $--Primary-White;
             font-family: $Inter;
@@ -2741,8 +2740,9 @@ h4 {
             gap: 22px;
             display: flex;
         }
-
+        
         .main_btn {
+            flex: 1;
             border: 1px solid $--Primary-Red;
             background-color: transparent;
             @include transition();
@@ -2755,10 +2755,14 @@ h4 {
     }
 
     .item_basket {
-        border: 1px solid red;
+        margin-top: 36px;
         width: 100%;
-        @include flex-center();
+        @include flex-full-center();
         gap: 23px;
+        
+        .main_container {
+            margin: 0;
+        }
 
         .item_basket_left {
             flex: 1;

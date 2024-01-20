@@ -399,6 +399,30 @@ h4 {
     margin-bottom: 120px;
 }
 
+
+.item_basket_left {
+    flex: 1;
+    border: 1px solid $--Primary-Red;
+    transform: skew(-30deg);
+
+    .item_basket_left_in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 32px;
+        transform: skew(30deg);
+
+        span {
+            font-family: $Bebas;
+            color: $--Primary-White;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 1.2px;
+        }
+    }
+}
 // .radio_btn {
 //     > input { 
 //         // display:none;
@@ -2800,6 +2824,139 @@ h4 {
                 &:hover {
                     background-color: $--Primary-Red;
                 }
+            }
+        }
+    }
+}
+
+.basket_section {
+    .basket_section_in {
+        margin: 48px 0 120px 0;
+        background-color: #141414;
+        padding: 48px;
+
+        .basket_block {
+            position: relative;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #434343FF;
+
+            .basket_close_icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+            }
+
+            h6 {
+                color: $--Primary-White;
+                font-family: $Bebas;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 32px */
+                letter-spacing: 1.6px;
+            }
+
+            .item_basket_left {
+                width: 252px;
+            }
+        }
+
+        .basket_block_two {
+            padding: 24px 0;
+        }
+
+        .basket_title {
+            color: $--Primary-White;
+            font-family: $Bebas;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 0.9px;
+            padding-bottom: 16px;
+        }
+
+        .basket_name {
+            flex: 4;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            .basket_text {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                h5 {
+                    color: $--Primary-White;
+                    font-family: $--Primary-White;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%; /* 32px */
+                    letter-spacing: 1.6px;
+                }
+
+                h6 {
+                    color: $--Primary-Gray;
+                    font-family: $Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 125%; /* 20px */
+
+                    span {
+                        color: $--Primary-White;
+                    }
+                }
+            }
+        }
+
+        .basket_price {
+            flex: 1;
+        }
+
+        .basket_number {
+            flex: 2;
+        }
+
+        .basket_total {
+            flex: 1;
+        }
+
+        .basket_section_number {
+            h6 {
+                text-align: center;
+                padding: 48px 0;
+                color: $--Primary-Red;
+                font-family: $Bebas;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 32px */
+                letter-spacing: 1.6px;
+            }
+        }
+
+        .basket_section_btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            .main_btn_one {
+                border: 1px solid $--Primary-Red;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: $--Primary-Red;
+                }
+            }   
+
+            .main_btn {
+                width: 420px;
             }
         }
     }

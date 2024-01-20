@@ -323,6 +323,28 @@ h4 {
   margin-bottom: 120px;
 }
 
+.item_basket_left {
+  flex: 1;
+  border: 1px solid #E63533;
+  transform: skew(-30deg);
+}
+.item_basket_left .item_basket_left_in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 32px;
+  transform: skew(30deg);
+}
+.item_basket_left .item_basket_left_in span {
+  font-family: "Bebas Neue", sans-serif;
+  color: #FFF;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.2px;
+}
+
 .index_home .index_header {
   position: fixed;
   top: 0;
@@ -2274,6 +2296,116 @@ h4 {
 }
 .item_section .item_basket .item_basket_right .main_btn:hover {
   background-color: #E63533;
+}
+
+.basket_section .basket_section_in {
+  margin: 48px 0 120px 0;
+  background-color: #141414;
+  padding: 48px;
+}
+.basket_section .basket_section_in .basket_block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #434343;
+}
+.basket_section .basket_section_in .basket_block .basket_close_icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.basket_section .basket_section_in .basket_block h6 {
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 32px */
+  letter-spacing: 1.6px;
+}
+.basket_section .basket_section_in .basket_block .item_basket_left {
+  width: 252px;
+}
+.basket_section .basket_section_in .basket_block_two {
+  padding: 24px 0;
+}
+.basket_section .basket_section_in .basket_title {
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.9px;
+  padding-bottom: 16px;
+}
+.basket_section .basket_section_in .basket_name {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.basket_section .basket_section_in .basket_name .basket_text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.basket_section .basket_section_in .basket_name .basket_text h5 {
+  color: #FFF;
+  font-family: #FFF;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 32px */
+  letter-spacing: 1.6px;
+}
+.basket_section .basket_section_in .basket_name .basket_text h6 {
+  color: #707070;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 20px */
+}
+.basket_section .basket_section_in .basket_name .basket_text h6 span {
+  color: #FFF;
+}
+.basket_section .basket_section_in .basket_price {
+  flex: 1;
+}
+.basket_section .basket_section_in .basket_number {
+  flex: 2;
+}
+.basket_section .basket_section_in .basket_total {
+  flex: 1;
+}
+.basket_section .basket_section_in .basket_section_number h6 {
+  text-align: center;
+  padding: 48px 0;
+  color: #E63533;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 32px */
+  letter-spacing: 1.6px;
+}
+.basket_section .basket_section_in .basket_section_btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.basket_section .basket_section_in .basket_section_btns .main_btn_one {
+  border: 1px solid #E63533;
+  background-color: transparent;
+}
+.basket_section .basket_section_in .basket_section_btns .main_btn_one:hover {
+  background-color: #E63533;
+}
+.basket_section .basket_section_in .basket_section_btns .main_btn {
+  width: 420px;
 }
 
 .header {

@@ -1631,9 +1631,9 @@ h4 {
 }
 .title_error h1 {
   font-size: 8rem;
+  color: #222222;
   font-family: "Bebas Neue", sans-serif;
   text-align: center;
-  color: #FFF;
   text-transform: uppercase;
   font-weight: 900;
 }

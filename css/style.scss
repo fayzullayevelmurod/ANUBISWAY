@@ -412,7 +412,7 @@ h4 {
         padding: 12px 32px;
         transform: skew(30deg);
 
-        span {
+        input {
             font-family: $Bebas;
             color: $--Primary-White;
             font-size: 24px;
@@ -420,6 +420,9 @@ h4 {
             font-weight: 700;
             line-height: 100%;
             letter-spacing: 1.2px;
+            background-color: transparent;
+            width: 20px;
+            border: none;
         }
     }
 }
@@ -2835,6 +2838,18 @@ h4 {
         background-color: #141414;
         padding: 48px;
 
+        .media_title {
+            margin: 24px 0 12px 0;
+            display: none;
+            color: $--Primary-White;
+            font-family: $Bebas;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 18px */
+            letter-spacing: 0.9px;
+        }
+
         .basket_block {
             position: relative;
             display: flex;
@@ -2861,6 +2876,17 @@ h4 {
 
             .item_basket_left {
                 width: 252px;
+            }
+
+            .basket_title {
+                color: $--Primary-White;
+                font-family: $Bebas;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.9px;
+                padding-bottom: 16px;
             }
         }
 
@@ -2892,7 +2918,7 @@ h4 {
 
                 h5 {
                     color: $--Primary-White;
-                    font-family: $--Primary-White;
+                    font-family: $Bebas;
                     font-size: 32px;
                     font-style: normal;
                     font-weight: 700;
@@ -2911,6 +2937,17 @@ h4 {
                     span {
                         color: $--Primary-White;
                     }
+                }
+
+                .price {
+                    display: none;
+                    color: $--Primary-White;
+                    font-family: $Bebas;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 100%; /* 32px */
+                    letter-spacing: 1.6px;
                 }
             }
         }

@@ -335,7 +335,7 @@ h4 {
   padding: 12px 32px;
   transform: skew(30deg);
 }
-.item_basket_left .item_basket_left_in span {
+.item_basket_left .item_basket_left_in input {
   font-family: "Bebas Neue", sans-serif;
   color: #FFF;
   font-size: 24px;
@@ -343,6 +343,9 @@ h4 {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 1.2px;
+  background-color: transparent;
+  width: 20px;
+  border: none;
 }
 
 .index_home .index_header {
@@ -2303,6 +2306,17 @@ h4 {
   background-color: #141414;
   padding: 48px;
 }
+.basket_section .basket_section_in .media_title {
+  margin: 24px 0 12px 0;
+  display: none;
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 18px */
+  letter-spacing: 0.9px;
+}
 .basket_section .basket_section_in .basket_block {
   position: relative;
   display: flex;
@@ -2327,6 +2341,16 @@ h4 {
 }
 .basket_section .basket_section_in .basket_block .item_basket_left {
   width: 252px;
+}
+.basket_section .basket_section_in .basket_block .basket_title {
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.9px;
+  padding-bottom: 16px;
 }
 .basket_section .basket_section_in .basket_block_two {
   padding: 24px 0;
@@ -2354,7 +2378,7 @@ h4 {
 }
 .basket_section .basket_section_in .basket_name .basket_text h5 {
   color: #FFF;
-  font-family: #FFF;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -2371,6 +2395,16 @@ h4 {
 }
 .basket_section .basket_section_in .basket_name .basket_text h6 span {
   color: #FFF;
+}
+.basket_section .basket_section_in .basket_name .basket_text .price {
+  display: none;
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 32px */
+  letter-spacing: 1.6px;
 }
 .basket_section .basket_section_in .basket_price {
   flex: 1;
@@ -2701,6 +2735,33 @@ h4 {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .basket_section .basket_section_in {
+    margin: 30px 0 100px 0;
+    padding: 30px;
+  }
+  .basket_section .basket_section_in .basket_block .basket_price {
+    display: none;
+  }
+  .basket_section .basket_section_in .basket_block .item_basket_left {
+    width: 172px;
+    margin-right: 25px;
+  }
+  .basket_section .basket_section_in .basket_block .item_basket_left .item_basket_left_in {
+    padding: 12px 20px;
+  }
+  .basket_section .basket_section_in .basket_block .basket_name .basket_text .price {
+    display: block;
+  }
+  .basket_section .basket_section_in .basket_block .basket_total {
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+  .basket_section .basket_section_in .basket_section_number h6 {
+    padding: 24px 0;
+  }
+  .basket_section .basket_section_in .basket_section_btns .main_btn {
+    width: 334px;
+  }
 }
 @media only screen and (max-width: 993px) {
   .video .video_card {
@@ -2887,6 +2948,50 @@ h4 {
   }
   .catalog .catalog_card img {
     height: 320px;
+  }
+  .basket_section .basket_section_in {
+    margin: 30px 0 60px 0;
+    padding: 20px;
+  }
+  .basket_section .basket_section_in .basket_block_two {
+    border-bottom: 1px solid #434343 !important;
+  }
+  .basket_section .basket_section_in .basket_block {
+    border-bottom: none;
+  }
+  .basket_section .basket_section_in .basket_block .basket_title {
+    display: none;
+  }
+  .basket_section .basket_section_in .basket_block .basket_close_icon {
+    top: 0;
+    bottom: auto;
+  }
+  .basket_section .basket_section_in .basket_block .item_basket_left {
+    margin-right: 0;
+  }
+  .basket_section .basket_section_in .basket_block_two {
+    text-align: center;
+    flex-direction: column;
+  }
+  .basket_section .basket_section_in .basket_block_two .basket_name {
+    gap: 12px;
+    flex-direction: column;
+  }
+  .basket_section .basket_section_in .basket_block_two .basket_close_media {
+    top: 20px;
+  }
+  .basket_section .basket_section_in .media_title {
+    display: block;
+  }
+  .basket_section .basket_section_in .basket_section_btns {
+    align-items: center;
+    flex-direction: column;
+  }
+  .basket_section .basket_section_in .basket_section_btns .main_btn {
+    width: 240px;
+  }
+  .basket_section .basket_section_in .basket_section_btns .main_btn span {
+    padding: 12px;
   }
 }
 @media only screen and (max-width: 660px) {

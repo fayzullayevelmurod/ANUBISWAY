@@ -210,6 +210,53 @@
             }
         }
     }
+
+    .basket_section {
+        .basket_section_in {
+            margin: 30px 0 100px 0;
+            padding: 30px;
+
+            .basket_block  {
+                .basket_price {
+                    display: none;
+                }
+
+                .item_basket_left {
+                    width: 172px;
+                    margin-right: 25px;
+                    .item_basket_left_in {
+                        padding: 12px 20px;
+                    }
+                }
+
+                .basket_name {
+                    .basket_text {
+                        .price {
+                            display: block;
+                        }
+                    }
+                }
+
+                .basket_total {
+                    margin-right: 20px;
+                    white-space: nowrap;
+                }
+            }
+
+            .basket_section_number  {
+                h6 {
+                    padding: 24px 0;
+                }
+            }
+
+            .basket_section_btns  {
+                .main_btn {
+                    width: 334px;
+                }
+            }
+        }
+
+    }
 }
 
 @media only screen and (max-width: 993px) {
@@ -307,6 +354,7 @@
             }
         }
     }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -476,6 +524,66 @@
                 height: 320px;
             }
         }
+    }
+
+    .basket_section {
+        .basket_section_in {
+            margin: 30px 0 60px 0;
+            padding: 20px;
+
+            .basket_block_two {
+                border-bottom: 1px solid #434343FF !important;
+            }
+
+            .basket_block {
+                border-bottom: none;
+                .basket_title {
+                    display: none;
+                }
+
+                .basket_close_icon {
+                    // margin: 0;
+                    top: 0;
+                    bottom: auto;
+                }
+
+                .item_basket_left {
+                    margin-right: 0;
+                }
+            }
+            
+            .basket_block_two {
+                text-align: center;
+                flex-direction: column;
+
+                .basket_name {
+                    gap: 12px;
+                    flex-direction: column;
+                }
+
+                .basket_close_media {
+                    top: 20px;
+                }
+            }
+
+            .media_title {
+                display: block;
+            }
+
+            .basket_section_btns {
+                align-items: center;
+                flex-direction: column;
+
+                .main_btn {
+                    width: 240px;
+
+                    span {
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+
     }
 }
 

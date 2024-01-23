@@ -2442,6 +2442,66 @@ h4 {
   width: 420px;
 }
 
+.checkout_in {
+  margin: 48px 0 120px 0;
+  display: flex;
+  align-items: start;
+  gap: 24px;
+}
+.checkout_in .checkout_left {
+  flex: 2;
+}
+.checkout_in .checkout_catalog {
+  flex: 1;
+  background: #141414;
+  padding: 30px;
+}
+.checkout_in .checkout_form {
+  padding: 48px;
+  background: #141414;
+  margin-bottom: 30px;
+}
+.checkout_in .checkout_form h6 {
+  color: #FFF;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 1.6px;
+  margin-bottom: 30px;
+}
+.checkout_in .checkout_form .input_block {
+  display: flex;
+  gap: 24px;
+}
+.checkout_in .checkout_form .input_block input {
+  width: 100%;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  opacity: 0.7;
+  padding-bottom: 12px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #434343;
+}
+.checkout_in .checkout_form .input_block_two {
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #434343;
+}
+.checkout_in .checkout_form .input_block_one {
+  margin-bottom: 53px;
+}
+.checkout_in .checkout_check {
+  padding: 48px;
+  border: 1px solid red;
+  background: #141414;
+}
+
 .header {
   padding: 20px 0;
   border-bottom: 1px solid #333333;

@@ -278,15 +278,21 @@
                                 Выберите способ получения
                             </h6>
                             <div class="input_check">
-                                <input type="radio" name="check">
-                                <input type="radio" name="check">
+                                <div class=" radio">
+                                    <input id="radio-1" name="radio" type="radio" checked>
+                                    <label for="radio-1" class="radio-label">Онлайн-оплата</label>
+                                </div>
+                                <div class=" radio">
+                                    <input id="radio-2" name="radio" type="radio" checked>
+                                    <label for="radio-2" class="radio-label">Доставка</label>
+                                </div>
                             </div>
                             <h6>
                                 Адрес доставки
                             </h6>
                             <div class="input_address">
-                                <div class="input_address_left">
-                                    <input type="text" placeholder="Адрес">
+                                <div class="input_address_left input_address_block">
+                                    <input type="text" placeholder="Адрес" class="address_input">
                                     <div class="input_address_in">
                                         <input type="text" placeholder="Кв/офис">
                                         <input type="text" placeholder="Подъезд">
@@ -294,7 +300,9 @@
                                         <input type="text" placeholder="Этаж">
                                     </div>
                                 </div>
-                                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                                <div class="textare_address input_address_block">
+                                    <textarea  name="textarea" id=""   placeholder="Комментарий к заказу"></textarea>
+                                </div>
                             </div>
                         </div>
                         <div class="checkout_check">
@@ -331,7 +339,7 @@
                                 9 000 руб
                             </h6>
                         </div>
-                        <div class="checkout_catalog_block">
+                        <a href="#" class="checkout_catalog_block">
                             <div class="checkout_catalog_block_left">
                                 <img src="./images/checkout1.png" alt="">
                                 <div class="checkout_left_text">
@@ -355,8 +363,9 @@
                             <h6>
                                 1 х 4 500 руб
                             </h6>
-                        </div>
-                        <div class="checkout_catalog_block">
+                        </a>
+                        <div class="line"></div>
+                        <a href="#" class="checkout_catalog_block">
                             <div class="checkout_catalog_block_left">
                                 <img src="./images/checkout2.png" alt="">
                                 <div class="checkout_left_text">
@@ -380,7 +389,7 @@
                             <h6>
                                 1 х 4 500 руб
                             </h6>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

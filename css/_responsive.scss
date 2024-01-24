@@ -27,6 +27,24 @@
     }
 }
 
+@media only screen and (max-width: 1450px) {
+    .photo_slider {
+        .main_container {
+            max-width: 870px;
+        }
+
+        .slider_parent {
+            .slide_block {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1440px) {
 
     .header {
@@ -366,6 +384,19 @@
         }
     }
 
+    // photo
+    .photo_slider {
+        margin-bottom: 100px;
+
+        h1 {
+            margin-bottom: 48px;
+        }
+
+        .swiper_child_wrap {
+            display: none;
+        }
+    }
+    // photo end
     .checkout {
         .checkout_catalog {
             padding: 30px;
@@ -539,6 +570,29 @@
         }
     }
 
+    // Photo
+    .photo_slider {
+        .slider_parent {
+            display: flex;
+            flex-direction: column;
+            gap: 110px;
+
+            .slide_block {
+                height: auto;
+
+                img {
+                    width: auto;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .img_wrap {
+                height: auto;
+            }
+        }
+    }
+    // Photo end
 }
 
 @media only screen and (max-width: 700px) {
@@ -1142,4 +1196,34 @@
             }
         }
     }
+
+    // Photo
+    .photo_slider {
+        margin-bottom: 60px;
+
+        h1 {
+            font-size: 40px;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        .slider_parent {
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+
+            .slide_block {
+                .img_wrap {
+                    width: 100%;
+
+                    img {
+                        max-height: 320px;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    // Photo end
 }

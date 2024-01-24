@@ -288,7 +288,7 @@ if (swiper_child_wrap) {
         scrollTrigger: {
           trigger: el,
           start: 'top center',
-          markers: false,
+          // markers: true,
           toggleClass: 'active'
         }
     })

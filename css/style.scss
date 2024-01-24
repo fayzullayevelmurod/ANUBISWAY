@@ -1973,6 +1973,12 @@ h4 {
         font-weight: 700;
         line-height: 100%;
         letter-spacing: 2.6px;
+        margin-bottom: 150px;
+        margin-top: 150px;
+    }
+
+    .error_bottom_title {
+        margin-bottom: 0px;
     }
 	// h1{
     //     border: 1px solid red;
@@ -1992,6 +1998,7 @@ h4 {
 
 .title_error{
 	position: relative;
+    transform: scale(3.8);
 	// top: 50%;
 	// left: 0;
 	width: 100%;

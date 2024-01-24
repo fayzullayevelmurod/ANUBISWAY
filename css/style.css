@@ -1622,6 +1622,11 @@ h4 {
   font-weight: 700;
   line-height: 100%;
   letter-spacing: 2.6px;
+  margin-bottom: 150px;
+  margin-top: 150px;
+}
+.error .error_bottom_title {
+  margin-bottom: 0px;
 }
 .error .main_btn {
   margin-top: 48px;
@@ -1630,6 +1635,7 @@ h4 {
 
 .title_error {
   position: relative;
+  transform: scale(3.8);
   width: 100%;
 }
 .title_error h1 {

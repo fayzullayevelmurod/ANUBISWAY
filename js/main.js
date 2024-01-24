@@ -265,3 +265,25 @@ $(document).ready(function() {
     input.val(value);
   })
 });
+
+let photo_slider_parent = document.querySelector('.photo_slider .slider_parent');
+if (photo_slider_parent) {
+  let photo_slider_child = new Swiper('.photo_slider .swiper_child', {
+    direction: "vertical",
+    slidesPerView: 4,
+    spaceBetween: 34,
+    freeMode: true,
+      watchSlidesProgress: true,
+  })
+
+  let photo_slider_1 = new Swiper(photo_slider_parent, {
+    direction: "vertical",
+    slidesPerView: 1,
+    mousewheel: true,
+    speed: 1000,
+    spaceBetween: 40,
+    thumbs: {
+      swiper: photo_slider_child,
+    },
+  })
+}

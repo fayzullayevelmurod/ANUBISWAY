@@ -3132,11 +3132,68 @@ h4 {
 
     .checkout_check {
         padding: 48px;
-        border: 1px solid red;
         background: #141414;
+
+        h6 {
+            color: $--Primary-White;
+            text-align: left;
+            font-family: $Bebas;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 1.2px;
+        }
+
+        .checkout_check_in {
+            margin: 30px 0;
+            white-space: nowrap;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                color: $--Primary-White;
+                font-family: $Bebas;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%; /* 18px */
+                letter-spacing: 0.9px;
+            }
+
+            .doted {
+                width: 100%;
+                border-bottom: 1px dashed #434343FF;
+            }
+        }
+
+        .checkout_btn {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            .main_btn {
+                width: 420px;
+            }
+
+            p {
+                max-width: 377px;
+                color: $--Primary-Gray;
+                font-family: $Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%; /* 14px */
+
+                a {
+                    color: $--Primary-White;
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .input_check {
+        
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -3149,8 +3206,59 @@ h4 {
             background: transparent;
         }
 
+        .radio {
+            display: flex;
+
+            input[type="radio"] {
+              position: absolute;
+              opacity: 0;
+              background: transparent;
+              + .radio-label {
+                &:before {
+                  content: '';
+                  background: transparent;
+                  border-radius: 100%;
+                  border: 1px solid darken($--Primary-Gray, 25%);
+                  display: inline-block;
+                  width: 1.4em;
+                  height: 1.4em;
+                  position: relative;
+                  top: -0.2em;
+                  margin-right: 12px;
+                  vertical-align: top;
+                  cursor: pointer;
+                  text-align: center;
+                  transition: all 250ms ease;
+                }
+              }
+              &:checked {
+                + .radio-label {
+                  &:before {
+                    background-color: transparent;
+                    box-shadow: inset 0 0 0 4px #141414;
+                  }
+                }
+              }
+              &:focus {
+                + .radio-label {
+                  &:before {
+                    outline: none;
+                    border-color: $--Primary-Red;
+                    background-color: $--Primary-Red;
+                  }
+                }
+              }
+              + .radio-label {
+                &:empty {
+                  &:before {
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+          }
+        
         label {
-            margin-left: 12px;
             color: $--Primary-White;
             font-family: $Inter;
             font-size: 16px;
@@ -3165,16 +3273,37 @@ h4 {
         gap: 24px;
 
         .input_address_left {
-            flex: 1;
             display: flex;
             flex-direction: column;
         }
 
         .textare_address {
-            flex: 1;
-            border: 1px solid red;
             display: flex;
+            flex-direction: column;
+        }
 
+        .input_address_block {
+            width: calc(100% / 2 - 14px);
+
+            textarea {
+                height: 100%;
+                width: 100%;
+                color: $--Primary-White;
+                font-family: $Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                padding-bottom: 12px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #434343FF;
+                resize: none;
+
+                &:focus {
+                    outline: none;
+                }
+            }
         }
 
         .input_address_in {
@@ -3187,6 +3316,7 @@ h4 {
         }
 
         input {
+            width: 100%;
             color: $--Primary-White;
             font-family: $Inter;
             font-size: 18px;
@@ -3199,7 +3329,6 @@ h4 {
             border-bottom: 1px solid #434343FF;
         }
     }
-
 
 }
 

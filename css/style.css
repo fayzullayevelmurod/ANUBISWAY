@@ -2958,6 +2958,17 @@ h4 {
     max-width: 644px;
   }
 }
+@media only screen and (max-width: 1650px) {
+  .photo_slider .main_container {
+    max-width: 950px;
+  }
+  .photo_slider .main_container .slider_parent .slide_block .img_wrap_2 {
+    width: 100%;
+  }
+  .photo_slider .main_container .slider_parent .slide_block .img_wrap_2 img {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 1450px) {
   .photo_slider .main_container {
     max-width: 870px;
@@ -3135,6 +3146,9 @@ h4 {
   }
   .checkout .checkout_in {
     flex-direction: column-reverse;
+  }
+  .photo_slider .swiper_child_wrap {
+    display: none;
   }
 }
 @media only screen and (max-width: 993px) {

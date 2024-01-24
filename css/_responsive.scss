@@ -27,6 +27,27 @@
     }
 }
 
+@media only screen and (max-width: 1650px) {
+    .photo_slider {
+        .main_container {
+            max-width: 950px;
+            
+            .slider_parent {
+                .slide_block {
+
+                    .img_wrap_2 {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 1450px) {
     .photo_slider {
         .main_container {
@@ -288,6 +309,12 @@
 
         .checkout_in {
             flex-direction: column-reverse;
+        }
+    }
+
+    .photo_slider {
+        .swiper_child_wrap {
+            display: none;
         }
     }
 }

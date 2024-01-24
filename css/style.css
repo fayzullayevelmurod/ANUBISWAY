@@ -2891,9 +2891,6 @@ h4 {
   .coperation .coperation_title_two {
     margin-top: 100px;
   }
-  .error .glitched {
-    font-size: 450px;
-  }
   .video .video_img {
     height: 420px;
   }
@@ -3290,6 +3287,29 @@ h4 {
   }
   .basket_section .basket_section_in .basket_section_btns .main_btn span {
     padding: 12px;
+  }
+  .error {
+    margin: 40px 0;
+  }
+  .error .title_error {
+    transform: scale(1.8);
+  }
+  .error .error_title {
+    margin-top: 48px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+  }
+  .error .error_bottom_title {
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+  .error .main_btn {
+    margin-top: 30px;
+    width: 100%;
   }
 }
 @media only screen and (max-width: 660px) {

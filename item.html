@@ -234,21 +234,86 @@
         <!-- menu media -->
         <!-- header -->
 
+        <!-- breadcrumbs -->
+        <ul class="breadcrumbs item_breadcrumbs">
+            <li>
+                <a href="./index.html">
+                    Главная
+                </a>
+            </li>
+            <li>
+                <span class="line">
+                    /
+                </span>
+            </li>
+            <li>
+                <span>
+                    Магазин
+                </span>
+            </li>
+            <li>
+                <span class="line">
+                    /
+                </span>
+            </li>
+            <li>
+                <span>
+                    Одежда
+                </span>
+            </li>
+            <li>
+                <span class="line">
+                    /
+                </span>
+            </li>
+            <li>
+                <span>
+                    Худи
+                </span>
+            </li>
+        </ul>
+        <!-- breadcrumbs -->
+
         <section class="item_section">
-            <div class="main_container">
+            <div class="main_container item_one_container">
                 <div class="item_left">
-                    <div class="item_cards">
-                        <div class="item_card">
-                            <img src="./images/item_img1.png" alt="">
-                            <div class="bg_white"></div>
-                        </div>
-                        <div class="item_card">
-                            <img src="./images/item_img1.png" alt="">
-                            <div class="bg_white"></div>
-                        </div>
-                        <div class="item_card">
-                            <img src="./images/item_img1.png" alt="">
-                            <div class="bg_white"></div>
+                    <div class="news_slider">
+                        <div class="swiper news_twoSwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item_card">
+                                        <img src="./images/item_img1.png" alt="">
+                                        <div class="bg_white"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item_card">
+                                        <img src="./images/item_img1.png" alt="">
+                                        <div class="bg_white"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item_card">
+                                        <img src="./images/item_img1.png" alt="">
+                                        <div class="bg_white"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news_pagination">
+                                <div class="swiper-scrollbar"></div>
+                                <div class="news_btns">
+                                    <div class="news-button-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M12.5 15L7.5 10L12.5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="news-button-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -310,46 +375,60 @@
                         <p>
                             Выберите размер
                         </p>
-                        <div class="item_btns">
-                            <button class="main_btn">
-                                <span>
-                                    xs
-                                </span>
-                            </button>
-                            <button class="main_btn">
-                                <span>
-                                    s
-                                </span>
-                            </button>
-                            <button class="main_btn">
-                                <span>
-                                    m
-                                </span>
-                            </button>
-                            <button class="main_btn">
-                                <span>
-                                    l
-                                </span>
-                            </button>
-                            <button class="main_btn">
-                                <span>
-                                    xl
-                                </span>
-                            </button>
-                        </div>
+                        <form class="catalog_card_size">
+                            <label for="size" class="radio_btn">
+                                <input type="radio" name="btn" id="size" class="input-hidden" />
+                                <button type="button" class="main_btn">
+                                    <span>
+                                        xs
+                                    </span>
+                                </button>
+                            </label>
+                            <label for="size" class="radio_btn">
+                                <input type="radio" name="btn" id="size" class="input-hidden" />
+                                <button type="button" class="main_btn">
+                                    <span>
+                                        s
+                                    </span>
+                                </button>
+                            </label>
+                            <label for="size" class="radio_btn">
+                                <input type="radio" name="btn" id="size" class="input-hidden" />
+                                <button type="button" class="main_btn">
+                                    <span>
+                                        m
+                                    </span>
+                                </button>
+                            </label>
+                            <label for="size" class="radio_btn">
+                                <input type="radio" name="btn" id="size" class="input-hidden" />
+                                <button type="button" class="main_btn">
+                                    <span>
+                                        l
+                                    </span>
+                                </button>
+                            </label>
+                            <label for="size" class="radio_btn">
+                                <input type="radio" name="btn" id="size" class="input-hidden" />
+                                <button type="button" class="main_btn">
+                                    <span>
+                                        xl
+                                    </span>
+                                </button>
+                            </label>
+                        </form>
                     </div>
                     <div class="item_basket">
                         <div class="item_basket_left">
-                            <div class="item_basket_left_in">
-                                <button>
+                            <div class="item_basket_left_in quantity">
+                                <button class="quantity__minus_two">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M5 12H19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                 </button>
-                                <span class="number">
-                                    1
-                                </span>
-                                <button>
+                                <input type="text" name="quantity" class="number quantity__input_two" value="1">
+                                </input>
+                                <button class="quantity__plus_two">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                             <path d="M12 5V19" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
@@ -365,6 +444,169 @@
                                     В корзину
                                 </span>
                             </button>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <button id="accordion-button-1" aria-expanded="false">
+                            <span class="accordion-title">
+                                Описание
+                            </span>
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9L12 15L18 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                  </svg>
+                            </span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                                Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что выбранный нами инновационный путь способствует повышению качества распределения внутренних резервов и ресурсов.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-2" aria-expanded="false">
+                            <span class="accordion-title">
+                                Состав изделия
+                            </span>
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9L12 15L18 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                                Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что выбранный нами инновационный путь способствует повышению качества распределения внутренних резервов и ресурсов.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-3" aria-expanded="false">
+                            <span class="accordion-title">
+                                Уход (футер)
+                            </span>
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9L12 15L18 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                                Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что выбранный нами инновационный путь способствует повышению качества распределения внутренних резервов и ресурсов.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-4" aria-expanded="false">
+                            <span class="accordion-title">
+                                Доставка и оплата
+                            </span>
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9L12 15L18 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                                Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что выбранный нами инновационный путь способствует повышению качества распределения внутренних резервов и ресурсов.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item accordion-item-end">
+                          <button id="accordion-button-5" aria-expanded="false">
+                            <span class="accordion-title">
+                                Размерная сетка изделий
+                            </span>
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M6 9L12 15L18 9" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                                Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований требует от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что выбранный нами инновационный путь способствует повышению качества распределения внутренних резервов и ресурсов.
+                            </p>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="news_bottomSwiper_wrapper">
+                <div class="main_container">
+                    <div class="swiper news_bottomSwiper">
+                        <h5>
+                            Возможно, вас заинтересует
+                        </h5>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="item_bottom_card">
+                                    <img src="./images/item_slider1.png" alt="">
+                                    <div class="bg_white"></div>
+                                </a>
+                                <h6>
+                                    Свитшот
+                                    <span>
+                                        4 500 руб
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="item_bottom_card">
+                                    <img src="./images/item_slider2.png" alt="">
+                                    <div class="bg_white"></div>
+                                </a>
+                                <h6>
+                                    Штаны
+                                    <span>
+                                        4 500 руб
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="item_bottom_card">
+                                    <img src="./images/item_slider3.png" alt="">
+                                    <div class="bg_white"></div>
+                                </a>
+                                <h6>
+                                    Футболка
+                                    <span>
+                                        4 500 руб
+                                    </span>
+                                </h6>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="item_bottom_card">
+                                    <img src="./images/item_slider1.png" alt="">
+                                    <div class="bg_white"></div>
+                                </a>
+                                <h6>
+                                    Свитшот
+                                    <span>
+                                        4 500 руб
+                                    </span>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="news_pagination">
+                            <div class="swiper-scrollbar"></div>
+                            <div class="news_btns">
+                                <div class="news-button-prev">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M12.5 15L7.5 10L12.5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div class="news-button-next">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M7.5 15L12.5 10L7.5 5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

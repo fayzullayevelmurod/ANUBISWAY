@@ -64,6 +64,17 @@
             }
         }
     }
+
+    .item_section {
+        .item_left {
+            max-width: 590px;
+        }
+
+        .news_pagination {
+            margin: 46px auto 0 auto;
+            max-width: 354px;
+        }
+    }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -315,6 +326,41 @@
     .photo_slider {
         .swiper_child_wrap {
             display: none;
+        }
+    }
+
+    .item_breadcrumbs {
+        display: flex;
+    }
+
+    .item_section {
+        .item_one_container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .breadcrumbs {
+            display: none;
+        }
+
+        .item_right {
+            text-align: center;
+        }
+
+        .main_title {
+            text-align: center;
+        }
+
+        .artikul {
+            justify-content: center;
+        }
+
+        .main_title_two {
+            text-align: center;
+        }
+
+        .item_size {
+            margin: 0 auto;
         }
     }
 }
@@ -816,6 +862,43 @@
             }
         }
     }
+
+    .item_section {
+
+        .news_bottomSwiper_wrapper {
+            .news_pagination {
+                margin: 0 auto;
+            }
+        }
+
+        .item_one_container {
+            margin: 30px 20px 45px 20px;
+        }
+
+        .item_left .item_card .bg_white {
+            transform: translate(-5px, 1px);
+        }
+
+        .news_pagination {
+            margin: 5px 0;
+        }
+
+        .item_left {
+            max-width: 100%;
+        }
+
+        .item_basket {
+            flex-direction: column;
+        }
+
+        .catalog_card_size {
+            gap: 10px;
+        }
+
+        .item_basket_left, .item_basket_right {
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -892,6 +975,37 @@
         display: inline-block;
         animation: marquee 50s linear infinite;
     }
+
+    .item_section  {
+
+        .main_container {
+            margin: 30px auto 60px auto;
+        }
+        .main_title_two {
+            font-size: 40px;
+        }
+        .accordion {
+            .accordion-content {
+                p {
+                    text-align: left;
+                }
+            }
+        }
+
+        .news_bottomSwiper_wrapper {
+            .news_bottomSwiper  {
+                h6 , h5  {
+                    font-size: 30px;
+                }
+
+                h5  {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    
     
     .item-collection-1 {
         position: relative;

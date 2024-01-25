@@ -142,6 +142,48 @@ let swiper_newss = new Swiper(".newsSwiper", {
   },
 });
 
+// newsSlider
+let swiper_newsss = new Swiper(".news_twoSwiper", {
+  spaceBetween: 24,
+  scrollbar: {
+      el: ".swiper-scrollbar",
+      // hide: true,
+
+  },
+  navigation: {
+      nextEl: ".news-button-next",
+      prevEl: ".news-button-prev",
+  },
+});
+
+// newsSlider
+let news_bottomSwiper = new Swiper(".news_bottomSwiper", {
+  spaceBetween: 34,
+  scrollbar: {
+      el: ".swiper-scrollbar",
+      // hide: true,
+
+  },
+  navigation: {
+      nextEl: ".news-button-next",
+      prevEl: ".news-button-prev",
+  },
+  breakpoints: {
+      300: {
+        slidesPerView: 1,
+        // spaceBetween: 24,
+      },
+      768: {
+        slidesPerView: 2,
+        // spaceBetween: 24,
+      },
+      993: {
+        slidesPerView: 3,
+        // spaceBetween: 24,
+      },
+  },
+});
+
 let home_slider = document.querySelector('.home_slider');
 if (home_slider) {
   let homeSlider = new Swiper(home_slider, {
@@ -302,3 +344,22 @@ if (swiper_child_wrap) {
     })
   })
 }
+
+
+
+
+const items = document.querySelectorAll('.accordion button');
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach((item) => item.addEventListener('click', toggleAccordion));

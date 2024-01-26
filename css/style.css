@@ -3881,6 +3881,30 @@ h4 {
     font-weight: 400;
     line-height: 125%;
   }
+  .menu_mobile .mobile_menu_close {
+    z-index: 2;
+  }
+  .menu_mobile .logo a {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .menu_mobile .logo a img {
+    width: 23px;
+    height: 68px;
+  }
+  .menu_mobile .logo a svg {
+    position: absolute;
+    width: 135px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .menu_mobile .mobile_link {
+    margin: 45px 0 30px 0;
+  }
 }
 @media only screen and (max-width: 576px) {
   .ticker {

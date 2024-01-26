@@ -968,6 +968,39 @@
         }
     }
 
+    .menu_mobile {
+
+        .mobile_menu_close {
+            z-index: 2;
+        }
+        .logo {
+            a {
+                position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                img {
+                    width: 23px;
+                    height: 68px;
+                }
+
+                svg {
+                    position: absolute;
+                    width: 135px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .mobile_link {
+            margin: 45px 0 30px 0;
+        }
+    }
+
 }
 
 @media only screen and (max-width: 576px) {

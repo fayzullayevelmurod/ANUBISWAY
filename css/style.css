@@ -2266,6 +2266,28 @@ h4 {
 .item_section .item_right {
   flex: 1;
 }
+.item_section .item_right .catalog_card_size {
+  margin: 24px auto 0 auto;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.item_section .item_right .catalog_card_size .radio_btn {
+  flex: 1;
+}
+.item_section .item_right .catalog_card_size .radio_btn .main_btn {
+  transition: 0.2s ease;
+  border: 1px solid #E63533;
+  background-color: transparent;
+  width: 100%;
+}
+.item_section .item_right .catalog_card_size .radio_btn .main_btn:hover {
+  background-color: #E63533;
+}
+.item_section .item_right .catalog_card_size .radio_btn.active .main_btn {
+  background-color: #E63533;
+}
 .item_section .item_cards {
   display: flex;
   flex-direction: column;
@@ -2531,6 +2553,9 @@ h4 {
   max-height: 9em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
+}
+.item_section .accordion button[aria-expanded=true] svg {
+  transform: rotate(180deg);
 }
 .item_section .accordion .accordion-content {
   opacity: 0;

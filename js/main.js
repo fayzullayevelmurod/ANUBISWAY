@@ -259,11 +259,33 @@ let radio_btn = document.querySelectorAll('.radio_btn');
 if (radio_btn.length){
   radio_btn.forEach(btn => {
     let radio_input = btn.querySelector('input[type="radio"]')
-    btn.onclick = () => {
+    btn.addEventListener('click', function() {
       radio_input.click()
-    }
+      let type = radio_input.getAttribute('name');
+      console.log(type);
+      radio_btn.forEach(el => {
+        if (type == el.querySelector('input[type="radio"]').getAttribute('name') && el.querySelector('input[type="radio"]').checked) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      })
+    })
   })
 }
+
+// let radio_btn2 = document.querySelectorAll('.item_section .radio_btn');
+
+// if (radio_btn2.length){
+//   radio_btn2.forEach(btn => {
+//     let radio_input = btn.querySelector('input[type="radio"]')
+//     btn.onclick = () => {
+//       radio_input.click()
+//       btn.classList.toggle('active')
+//       console.log('salom');
+//     }
+//   })
+// }
 
 $(document).ready(function() {
   const minus = $('.quantity__minus');

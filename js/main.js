@@ -1,5 +1,4 @@
-$(".title_error").append("<div class='glitch-window'></div>");
-$( "h1.glitched" ).clone().appendTo( ".glitch-window" );
+
 // input mask
 // let phoneInput = document.getElementById('phone');
 // let myForm = document.forms.myForm;
@@ -363,3 +362,7 @@ function toggleAccordion() {
 }
 
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+
+$(".title_error").append("<div class='glitch-window'></div>");
+$( "h1.glitched" ).clone().appendTo( ".glitch-window" );

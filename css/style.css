@@ -1353,6 +1353,9 @@ h4 {
 .coperation .swiper-wrapper .swiper-slide:hover {
   background-color: #E63533;
 }
+.coperation .swiper-wrapper .swiper-slide:hover img {
+  filter: grayscale(100%);
+}
 .coperation .swiper-wrapper .swiper-slide-active img {
   filter: grayscale(0%);
 }
@@ -1532,13 +1535,13 @@ h4 {
 .news .swiper-wrapper {
   margin-bottom: 36px;
 }
-.news .swiper-wrapper .swiper-slide-active img {
+.news .swiper-wrapper .swiper-slide:hover img {
   filter: grayscale(0%);
 }
-.news .swiper-wrapper .swiper-slide-active h6 {
+.news .swiper-wrapper .swiper-slide:hover h6 {
   color: #E63533;
 }
-.news .swiper-wrapper .swiper-slide-active .card_bg {
+.news .swiper-wrapper .swiper-slide:hover .card_bg {
   background-color: #E63533;
 }
 .news .news_pagination {
@@ -1894,6 +1897,9 @@ h4 {
 .video .video_card:hover .video_main_img {
   filter: grayscale(0%);
 }
+.video .video_card:hover h6 {
+  color: #E63533;
+}
 .video .video_card:hover p {
   opacity: 1;
 }
@@ -1931,7 +1937,7 @@ h4 {
 }
 .video h6 {
   margin-top: 40px;
-  color: #E63533;
+  color: #FFF;
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
   font-weight: 700;

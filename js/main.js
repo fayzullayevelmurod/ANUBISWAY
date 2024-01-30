@@ -332,6 +332,13 @@ $(document).ready(function() {
 
 let swiper_child_wrap = document.querySelector('.swiper_child_wrap');
 if (swiper_child_wrap) {
+  let t = true;
+  let photoChildSwiper = new Swiper('.swiper_child_wrap .swiper', {
+    direction: "vertical",
+    slidesPerView: 4,
+    spaceBetween: 24,
+  })
+
   document.addEventListener('scroll', function () {
     if ($('.slider_parent .slide_block.active').length) {
       $('.slider_parent .slide_block').not($($('.slider_parent .slide_block.active')[$('.slider_parent .slide_block.active').length - 1])).removeClass('checked');
@@ -341,9 +348,14 @@ if (swiper_child_wrap) {
       if (el.classList.contains('checked')) {
         $('.swiper_child_wrap .img_wrapper').not($($('.swiper_child_wrap .img_wrapper')[idx])).removeClass('active');
         $($('.swiper_child_wrap .img_wrapper')[idx]).addClass('active');
+        
+        if (t) {
+          photoChildSwiper.slideTo(idx);
+        }
       }
     })
   })
+
 
   gsap.registerPlugin(ScrollTrigger);
   $('.slider_parent .slide_block').each(function (idx, el) {
@@ -359,15 +371,16 @@ if (swiper_child_wrap) {
 
   $('.swiper_child_wrap .img_wrapper').each(function (idx, el) {
     $(el).click(function () {
+      t = false;
+      setTimeout(() => {
+        t = true;
+      }, 600);
       $([document.documentElement, document.body]).animate({
         scrollTop: $($('.slider_parent .slide_block')[idx]).offset().top
       }, 600);
     })
   })
 }
-
-
-
 
 const items = document.querySelectorAll('.accordion button');
 
@@ -388,3 +401,25 @@ items.forEach((item) => item.addEventListener('click', toggleAccordion));
 
 $(".title_error").append("<div class='glitch-window'></div>");
 $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
+
+let award_img = document.querySelectorAll('.photo_slider .slider_parent img');
+if (award_img.length) {
+    award_img.forEach(img => {
+        img.onclick = () => {
+            let src = [];
+                src.push({
+                    'src': img.getAttribute('src'),
+                    'thumb': img.getAttribute('src'),
+                    'subHtml': ''
+                });
+            $('#lightgallery').remove();
+            const galleryContainer = document.createElement('div');
+            galleryContainer.id = 'lightgallery';
+            document.body.appendChild(galleryContainer);
+            lightGallery(galleryContainer, {
+                dynamic: true,
+                dynamicEl: src,
+            });
+        }
+    })
+}

@@ -1406,7 +1406,7 @@ h4 {
   position: relative;
 }
 .coperation .swiper-wrapper .swiper-slide img {
-  filter: grayscale(100%);
+  opacity: 0.5;
 }
 .coperation .swiper-wrapper .swiper-slide::before {
   content: "";
@@ -1422,7 +1422,7 @@ h4 {
   top: 0;
 }
 .coperation .swiper-wrapper .swiper-slide:hover img {
-  filter: grayscale(0%);
+  opacity: 1;
 }
 .coperation .swiper-wrapper .swiper-slide-active img {
   filter: grayscale(0%);

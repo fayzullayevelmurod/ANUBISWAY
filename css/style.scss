@@ -1703,7 +1703,7 @@ h4 {
             }
 
             img {
-                filter: grayscale(100%);
+                opacity: 0.5;
             }
 
             &::before {
@@ -1723,7 +1723,7 @@ h4 {
                 }
 
                 img {
-                    filter: grayscale(0%);
+                    opacity: 1;
                 }
                 
             }
